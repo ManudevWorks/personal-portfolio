@@ -1,0 +1,34 @@
+{
+  "name": "mythos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=development",
+    "build:prod": "webpack --mode=production",
+    "start": "live-server ./dist/ --no-browser",
+    "watch": "webpack --mode=development --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "copy-webpack-plugin": "^14.0.0",
+    "css-loader": "^7.1.4",
+    "glob": "^13.0.6",
+    "html-loader": "^5.1.0",
+    "html-plugin": "^0.1.0",
+    "html-webpack-plugin": "^5.6.7",
+    "live-server": "^1.2.2",
+    "mini-css-extract-plugin": "^2.10.2",
+    "nunjucks-html-loader": "^1.1.0",
+    "nunjucks-loader": "^3.0.0",
+    "sass": "^1.100.0",
+    "sass-loader": "^17.0.0",
+    "webpack": "^5.107.2",
+    "webpack-cli": "^7.0.2",
+    "webpack-remove-empty-scripts": "^1.1.1"
+  }
+}

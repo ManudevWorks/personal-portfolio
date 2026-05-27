@@ -1,0 +1,53 @@
+<section id="hero-section">
+    <hero-section>
+        <div class="container hero-wrapper">
+            <div class="letter"></div>
+
+            <div class="hero-text">
+                <div class="eyebrow text">
+                    {% include "components/icons/location.njk" %}
+                    Brasil
+                </div>
+                <h2 class="title">
+                    {% if hero.title_part_1 != "" %}
+                        {{ hero.title_part_1 }}
+                    {%- endif -%}
+                    <br />
+                    {% if hero.title_part_2 != "" %}
+                        {{ hero.title_part_2 }}
+                    {% endif %}
+                    <span class="text-accent">{{ hero.title_part_3 }}</span>
+                </h2>
+                <div class="desc text">
+                    {{ hero.desc }}
+                </div>
+                <div class="perks">
+                    <div class="perk">
+                        <span class="perk-title">
+                            6+
+                        </span>
+                        <span class="text">
+                            Anos
+                        </span>
+                    </div>
+                    <div class="perk">
+                        <span class="perk-title">
+                            30+
+                        </span>
+                        <span class="text">
+                            Projetos
+                        </span>
+                    </div>
+                    <div class="perk">
+                        <span class="perk-title">
+                            20+
+                        </span>
+                        <span class="text">
+                            Clientes
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </hero-section>
+</section>

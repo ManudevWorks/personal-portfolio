@@ -1,0 +1,31 @@
+<header id="header" class="container">
+    <div class="header-wrapper">
+        <a href="/" title="Ir para {{ title }}">
+            <h1 class="logo">
+                <span class="abbr">m</span><div class="mask"><span class="hide">anu</span></div><span class="abbr">w</span><div class="mask"><span class="hide">orks</span></div><span class="abbr spot">.</span><span class="abbr spot">d</span><div class="mask"><span class="hide spot">ev</span></div>
+            </h1>
+        </a>
+        <div class="clock">
+            <clock-component initial-type="0"></clock-component>
+        </div>
+        <nav class="header-navigation">
+            <div class="mobile-navigation">
+                <input name="hambuger" id="hamburger" type="checkbox" />
+                <label for="hamburger">
+                    {% include "components/icons/hamburger.njk" %}
+                </label>
+            </div>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="/works" title="">Works</a>
+                </li>
+                <li>
+                    <a href="/leituras" title="">Leituras</a>
+                </li>
+                <li>
+                    <a href="/blog" title="">Blog</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

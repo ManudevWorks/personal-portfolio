@@ -1,0 +1,38 @@
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{ site.author }}",
+        "url": "{{ site.canonical_url }}",
+        "jobTitle": "{{ site.job_title }}",
+        "sameAs": [
+            "{{ site.social.github }}",
+            "{{ site.social.linkedin }}",
+            "{{ site.social.skoob }}",
+        ]
+    }
+</script>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "{{ site.title }}",
+        "url": "{{ site.canonical_url }}"
+    }
+</script>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "{{ site.canonical_url }}"
+            }
+        ]
+    }
+</script>

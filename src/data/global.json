@@ -1,0 +1,23 @@
+{
+    "site": {
+        "title": "Manu Works | Emanuel F. | Desenvolvedor e criador",
+        "lang": "pt-BR",
+        "canonical_url": "https://manuworks.dev",
+        "author": "Emanuel F.",
+        "desc": "A quem as casualidades da internet trouxeram aqui, sê bem-vindo. Aqui vivem ideias e projetos registrados para quem quiser conhecer.",
+        "site_name": "manuworkds.dev",
+        "theme_color": "#FAF8F5",
+        "job_title": "Desenvolvedor",
+        "social": {
+            "github": "",
+            "linkedin": "",
+            "skoob": ""
+        }
+    },
+    "hero": {
+        "title_part_1": "Desenvolvedor & criador.",
+        "title_part_2": "",
+        "title_part_3": "Sonhador, também.",
+        "desc": "A quem as casualidades da internet trouxeram aqui, sê bem-vindo. Aqui vivem ideias e projetos registrados para quem quiser conhecer."
+    }
+}

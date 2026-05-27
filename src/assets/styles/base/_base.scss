@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+:empty {
+  display: none;
+}
+
+body {
+  color: color-mix(in oklab, var(--foreground)90%, transparent);
+  background-color: var(--background);
+}
+
+h1 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-light);
+  line-height: 1.5;
+  font-family: var(--font-display);
+}
+
+h2 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-light);
+  line-height: 1.5;
+  font-family: var(--font-display);
+}
+
+h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-light);
+  line-height: 1.5;
+  font-family: var(--font-display);
+}
+
+h4 {
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-light);
+  line-height: 1.5;
+  font-family: var(--font-display);
+}
+
+label {
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-light);
+  line-height: 1.5;
+}
+
+button {
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-light);
+  line-height: 1.5;
+}
+
+input {
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-light);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+br {
+  display: initial !important;
+}
+
+ul.list-unstyled {
+  padding: 0;
+  list-style: none;
+}
+
+.text {
+  color: var(--muted-foreground);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.container {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100vw;
+}
+
+svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+path {
+  display: initial !important;
+}
+
+#back-to-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: 0;
+  color: transparent;
+  opacity: 0;
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  z-index: -1;
+
+  &#back-to-top:focus,
+  &#back-to-top:focus-visible,
+  &#back-to-top:focus-within {
+    all: initial;
+    position: fixed;
+    padding: 20px;
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    cursor: pointer;
+    background: var(--color-white);
+    z-index: 2;
+  }
+}
