@@ -1,0 +1,60 @@
+# Manu Works
+
+Personal website of **Emanuel F.**, created to present my work, projects, and presence as a developer.
+
+## About
+
+**Manu Works** is my personal portfolio.
+It brings together information about me, my projects, and the way I build digital solutions.
+
+This project is a clone of another project of mine called [Mythos](https://github.com/charliepeanut/mythos), which works as a base for creating websites. From that structure, I adapted the content, identity, and pages to build this personal website.
+
+The project was developed with a simple, organized, and easy-to-maintain structure in mind.
+
+## Technologies
+
+This project uses **Webpack** to compile and organize the final website files.
+
+Main features:
+
+* templates with **Nunjucks**;
+* styles with **SCSS**;
+* scripts in **JavaScript**;
+* static asset copying and processing;
+* automatic HTML page generation.
+
+## Technical structure
+
+Webpack automatically loads scripts and styles from the assets folders, processes `.njk` templates, and generates the final HTML, CSS, and JavaScript files.
+
+Pages are created from templates located in:
+
+```txt id="xuoep5"
+src/pages/
+```
+
+The final files are organized into:
+
+```txt id="qy4as8"
+assets/
+├── media/
+├── scripts/
+└── styles/
+```
+
+## Build
+
+During the build process, the project:
+
+* compiles SCSS styles;
+* generates HTML files;
+* bundles JavaScript scripts;
+* copies static assets to the final output folder.
+
+## Author
+
+**Emanuel F.**
+
+## License
+
+Personal and authorial project.
