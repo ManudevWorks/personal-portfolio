@@ -13,31 +13,32 @@ html {
 body {
   color: color-mix(in oklab, var(--foreground)90%, transparent);
   background-color: var(--background);
+  font-family: var(--font-body);
 }
 
 h1 {
-  font-size: var(--text-2xl);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-light);
   line-height: 1.5;
   font-family: var(--font-display);
 }
 
 h2 {
-  font-size: var(--text-xl);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-light);
   line-height: 1.5;
   font-family: var(--font-display);
 }
 
 h3 {
-  font-size: var(--text-lg);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-light);
   line-height: 1.5;
   font-family: var(--font-display);
 }
 
 h4 {
-  font-size: var(--text-base);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-light);
   line-height: 1.5;
   font-family: var(--font-display);
