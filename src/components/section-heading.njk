@@ -1,0 +1,21 @@
+{% macro render(heading_object) %}
+    <div class="section__title">
+        <h2 class="section__heading">
+            {% for k, title in heading_object.title %}
+                {% if loop.last %}
+                    <span class="text-accent">
+                {% endif %}
+                {{ title }}
+                {% if loop.last %}
+                    </span>
+                {% endif %}
+                {% if not loop.last %}<br>{% endif %}
+            {% endfor %}
+        </h2>
+        {% if heading_object.description %}
+            <p class="section__description">
+                {{ heading_object.description }}
+            </p>
+        {% endif %}
+    </div>
+{% endmacro %}

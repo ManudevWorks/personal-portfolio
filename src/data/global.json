@@ -19,5 +19,21 @@
         "title_part_2": "",
         "title_part_3": "Sonhador, também.",
         "desc": "A quem as casualidades da internet trouxeram aqui, sê bem-vindo. Aqui vivem ideias e projetos registrados para quem quiser conhecer."
+    },
+    "about_section": {
+        "heading": {
+            "title": {    
+                "line_1": "Sobre",
+                "line_2": "mim"
+            },
+            "description": ""
+        },
+        "description": {
+            "paragraph_1": "Desenvolvedor e designer multidisciplinar com mais de 7 anos de experiência com tecnologia.",
+            "paragraph_2": "Minha abordagem combina pensamento estratégico com atenção meticulosa aos detalhes. Acredito que um ótimo design é invisível — ele simplesmente funciona, parece natural e torna a vida das pessoas mais fácil.",
+            "paragraph_3": "Tecnicamente, acredito que um grande desenvolvimento é aquele que parece simples para quem usa: confiável, intuitivo e construído para resolver problemas de verdade.",
+            "paragraph_4": "Sou uma pessoa curiosa por natureza, instigada pelos \"por quês\". Além do desenvolvimento, me interesso por áreas como linguística, arte, história, música, religião e humanidades. Gosto de entender como as coisas funcionam — sejam sistemas, línguas, culturas ou ideias.",
+            "paragraph_5": "Vivendo pela primeira vez, não desdenho nenhuma experiência como inoportuna. Toda vivência pode ser útil quando dela se tira uma lição. Gosto de conhecer coisas novas e vencer novos desafios — bonum est diffusivum sui."
+        }
     }
 }

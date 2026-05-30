@@ -1,0 +1,16 @@
+{% extends "templates/side-to-side.njk" %}
+{% import "components/section-heading.njk" as section_heading %}
+
+{% block left %}
+    {{ section_heading.render(about_section.heading) }}
+{% endblock %}
+
+{% block right %}
+    <div class="section__description">
+        {% for k, paragraph in about_section.description %}
+            <p class="section__paragraph">
+                {{ paragraph }}
+            </p>
+        {% endfor %}
+    </div>
+{% endblock %}
