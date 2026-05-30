@@ -29,13 +29,13 @@ Webpack automatically loads scripts and styles from the assets folders, processe
 
 Pages are created from templates located in:
 
-```txt id="xuoep5"
+```txt
 src/pages/
 ```
 
 The final files are organized into:
 
-```txt id="qy4as8"
+```txt
 assets/
 ├── media/
 ├── scripts/
