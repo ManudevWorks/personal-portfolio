@@ -1,0 +1,17 @@
+<section id="{% block id %}side-section{% endblock %}" class="side-section">
+    <div class="section__wrapper">
+        {% block left %}
+            <div class="section__title">
+                <h2 class="section__heading">
+                    Section Title
+                </h2>
+            </div>
+        {% endblock %}
+
+        {% block right %}
+            <div class="section__description">
+                Description
+            </div>
+        {% endblock %}
+    </div>
+</section>

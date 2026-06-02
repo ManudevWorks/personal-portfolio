@@ -1,6 +1,6 @@
 #header {
   position: fixed;
-  padding: var(--space-sm) var(--space-md);
+  padding: var(--space-lg);
   top: 0;
   left: 0;
   z-index: 1;
@@ -96,7 +96,7 @@
 
   @media (min-width: 1025px) {
     & {
-      padding: var(--space-lg) var(--space-xl);
+      padding: var(--space-lg);
     }
 
     .header-navigation ul {
