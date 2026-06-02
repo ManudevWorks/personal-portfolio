@@ -138,3 +138,43 @@ path {
     z-index: 2;
   }
 }
+
+.section {
+  &__wrapper {
+    max-width: var(--container-width);
+    display: flex;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  &__title,
+  &__description {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  &__heading {
+    font-size: 3.5rem;
+    margin-top: 0;
+    line-height: 1.2;
+    display: block;
+    max-width: fit-content;
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--accent);
+    margin-bottom: var(--space-xl);
+  }
+
+  &__paragraph {
+    line-height: 1.5;
+    color: var(--muted-foreground);
+  }
+
+  &__description {
+    color: var(--muted-foreground);
+    line-height: 1.4;
+  }
+}
+
+.side-section {
+  min-height: 65dvh;
+}

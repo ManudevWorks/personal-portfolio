@@ -1,6 +1,8 @@
 {% extends "templates/side-to-side.njk" %}
 {% import "components/section-heading.njk" as section_heading %}
 
+{% block id %}about-section{% endblock %}
+
 {% block left %}
     {{ section_heading.render(about_section.heading) }}
 {% endblock %}

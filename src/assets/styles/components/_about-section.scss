@@ -1,34 +1,5 @@
 .section {
-    &__wrapper {
-        max-width: var(--container-width);
-        display: flex;
-        padding-left: var(--space-lg);
-        padding-right: var(--space-lg);
-    }
-
-    &__title,
-    &__description {
-        flex: 0 0 50%;
-        width: 50%;
-    }
-
-    &__heading {
-        font-size: var(--font-size-xxl);
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 1;
-        display: block;
-        max-width: fit-content;
-        padding-bottom: var(--space-xl);
-        border-bottom: 1px solid var(--accent);
-    }
-
-    &__paragraph {
-        line-height: 1.5;
-        color: var(--muted-foreground);
-
-        &:first-child {
-            color: revert;
-        }
+    &__paragraph:first-child {
+        color: revert;
     }
 }
