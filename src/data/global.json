@@ -22,7 +22,7 @@
     },
     "about_section": {
         "heading": {
-            "title": {    
+            "title": {
                 "line_1": "Sobre",
                 "line_2": "mim"
             },
@@ -35,5 +35,67 @@
             "paragraph_4": "Sou uma pessoa curiosa por natureza, instigada pelos \"por quês\". Além do desenvolvimento, me interesso por áreas como linguística, arte, história, música, religião e humanidades. Gosto de entender como as coisas funcionam — sejam sistemas, línguas, culturas ou ideias.",
             "paragraph_5": "Vivendo pela primeira vez, não desdenho nenhuma experiência como inoportuna. Toda vivência pode ser útil quando dela se tira uma lição. Gosto de conhecer coisas novas e vencer novos desafios — bonum est diffusivum sui."
         }
+    },
+    "worked_with": {
+        "heading": {
+            "title": {
+                "line_1": "Marcas",
+                "line_2": "atendidas"
+            },
+            "description": ""
+        },
+        "brands": [
+            "Stanley",
+            "Gummy",
+            "Bold Snacks",
+            "Stanley",
+            "Gummy",
+            "Bold Snacks",
+            "Stanley",
+            "Gummy",
+            "Bold Snacks"
+        ]
+    },
+    "personal_projects": {
+        "heading_left": {
+            "title": {
+                "line_1": "Linguagem &",
+                "line_2": "Comunicação"
+            },
+            "description": "\"A fala tem um lado individual e um lado social, e não podemos conceber um sem o outro.\" - Ferdinand de Saussure"
+        },
+        "heading_right": {
+            "title": {
+                "line_1": "Projetos Pessais &",
+                "line_2": "Hobbies"
+            },
+            "description": ""
+        },
+        "languages": [
+            {
+                "name": "Português",
+                "fluency_step": 5
+            },
+            {
+                "name": "Inglês",
+                "fluency_step": 4
+            },
+            {
+                "name": "Francês",
+                "fluency_step": 2
+            },
+            {
+                "name": "Alemão",
+                "fluency_step": 2
+            },
+            {
+                "name": "Latim",
+                "fluency_step": 3
+            },
+            {
+                "name": "Grego Antigo",
+                "fluency_step": 3
+            }
+        ]
     }
 }

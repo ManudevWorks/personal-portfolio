@@ -1,0 +1,40 @@
+.section {
+    &__content-left,
+    &__content-right {
+        width: 100%;
+
+        & > * {
+            width: 100% !important;
+        }
+    }
+
+    &__language-item {
+        margin-bottom: var(--space-lg);
+    }
+
+    &__language-name {
+        color: var(--muted-foreground);
+        display: block;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__language-fluency {
+        display: flex;
+        width: 100%;
+        gap: 4px;
+
+        &-step {
+            flex: 1;
+            min-height: 3px;
+            background-color: var(--color-gray-300);
+
+            &.active {
+                background-color: var(--accent);
+                border-radius: 12px;
+            }
+        }
+    }
+}

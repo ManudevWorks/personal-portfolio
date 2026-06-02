@@ -1,0 +1,20 @@
+{% extends "templates/side-to-side.njk" %}
+{% import "components/section-heading.njk" as section_heading %}
+
+{% block id %}brands{% endblock %}
+
+{% block left %}
+    {{ section_heading.render(worked_with.heading) }}
+{% endblock %}
+
+{% block right %}
+    <div class="section__brands-grid">
+        {% for brand in worked_with.brands %}
+            <div class="section__brands-grid-item">
+                <span class="text">
+                    {{ brand }}
+                </span>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
