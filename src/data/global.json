@@ -56,6 +56,60 @@
             "Bold Snacks"
         ]
     },
+    "contact": {
+        "heading": {
+            "title": {
+                "line_1": "Vamos Criar",
+                "line_2": "Algo Incrível"
+            },
+            "description": "Estou sempre interessado em ouvir sobre novos projetos e oportunidades. Se tiver uma dúvida ou quiser apenas dizer oi, responderei em breve."
+        },
+        "links": [
+            { "label": "Email", "value": "hello@example.com", "href": "mailto:hello@example.com" },
+            { "label": "LinkedIn", "value": "/in/yourprofile", "href": "" },
+            { "label": "GitHub", "value": "@yourusername", "href": "" },
+            { "label": "Twitter", "value": "@yourusername", "href": "" }
+        ]
+    },
+    "selected_work": {
+        "heading": {
+            "title": {
+                "line_1": "Trabalhos",
+                "line_2": "Selecionados"
+            },
+            "description": "Uma coleção de projetos que demonstram minha abordagem ao design e desenvolvimento."
+        },
+        "projects": [
+            {
+                "title": "Projeto 1",
+                "year": "2025",
+                "category": "Aplicação Web",
+                "description": "Plataforma de análise abrangente para equipes modernas com colaboração em tempo real.",
+                "tags": ["React", "Node.js", "WebSocket"]
+            },
+            {
+                "title": "Projeto 2",
+                "year": "2024",
+                "category": "Design de Sistema",
+                "description": "Design system acessível e escalável utilizado como base de múltiplos produtos digitais.",
+                "tags": ["TypeScript", "Storybook", "SCSS"]
+            },
+            {
+                "title": "Projeto 3",
+                "year": "2024",
+                "category": "Site Institucional",
+                "description": "Site institucional com foco em performance, acessibilidade e experiência editorial.",
+                "tags": ["Next.js", "CMS", "SEO"]
+            },
+            {
+                "title": "Projeto 4",
+                "year": "2023",
+                "category": "Aplicação Mobile",
+                "description": "Aplicativo de gestão de tarefas com sincronização offline e notificações inteligentes.",
+                "tags": ["React Native", "SQLite", "Push"]
+            }
+        ]
+    },
     "personal_projects": {
         "heading_left": {
             "title": {
@@ -66,11 +120,28 @@
         },
         "heading_right": {
             "title": {
-                "line_1": "Projetos Pessais &",
+                "line_1": "Projetos Pessoais &",
                 "line_2": "Hobbies"
             },
             "description": ""
         },
+        "projects": [
+            {
+                "title": "Contribuições Open Source",
+                "description": "Contribuindo para design systems e bibliotecas de componentes React usadas por milhares de desenvolvedores.",
+                "tags": ["React", "TypeScript", "Open Source"]
+            },
+            {
+                "title": "Projetos de Linguística",
+                "description": "Pesquisa e escrita sobre linguística aplicada, etimologia e a estrutura das línguas naturais.",
+                "tags": ["Linguística", "Escrita", "Pesquisa"]
+            },
+            {
+                "title": "Experimentos Criativos",
+                "description": "Explorando a interseção entre arte, tecnologia e design — do generativo ao artesanal.",
+                "tags": ["Design", "Criatividade", "Arte"]
+            }
+        ],
         "languages": [
             {
                 "name": "Português",

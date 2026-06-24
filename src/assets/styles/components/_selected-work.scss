@@ -1,0 +1,85 @@
+.selected-work__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+}
+
+.work-card {
+    &__media {
+        position: relative;
+        background-color: var(--muted);
+        border-radius: var(--radius-md);
+        aspect-ratio: 4 / 3;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: var(--space-xl);
+        overflow: hidden;
+        margin-bottom: var(--space-lg);
+    }
+
+    &__index {
+        font-family: var(--font-display);
+        font-size: var(--font-size-xxl);
+        font-weight: var(--font-weight-light);
+        color: var(--muted-foreground);
+        opacity: 0.4;
+        user-select: none;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__title {
+        font-family: var(--font-display);
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-light);
+        color: var(--foreground);
+        margin: 0;
+    }
+
+    &__year {
+        font-size: var(--font-size-sm);
+        color: var(--muted-foreground);
+    }
+
+    &__category {
+        font-size: var(--font-size-sm);
+        color: var(--muted-foreground);
+    }
+
+    &__description {
+        font-size: var(--font-size-sm);
+        color: var(--foreground);
+        line-height: 1.6;
+        margin: var(--space-xs) 0 0;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+        padding: 0;
+        margin: var(--space-xs) 0 0;
+    }
+
+    &__tag {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-pill);
+        padding: var(--space-xxs) var(--space-sm);
+        font-size: var(--font-size-xs);
+        color: var(--foreground);
+        line-height: 1.5;
+    }
+}

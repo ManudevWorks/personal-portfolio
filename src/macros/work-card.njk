@@ -1,0 +1,28 @@
+{% macro render(project, index) %}
+    <article class="work-card">
+        <div class="work-card__media">
+            <span class="work-card__index">{{ index }}</span>
+        </div>
+        <div class="work-card__body">
+            <div class="work-card__header">
+                <h3 class="work-card__title">{{ project.title }}</h3>
+                {% if project.year %}
+                    <span class="work-card__year">{{ project.year }}</span>
+                {% endif %}
+            </div>
+            {% if project.category %}
+                <span class="work-card__category">{{ project.category }}</span>
+            {% endif %}
+            {% if project.description %}
+                <p class="work-card__description">{{ project.description }}</p>
+            {% endif %}
+            {% if project.tags %}
+                <ul class="work-card__tags list-unstyled">
+                    {% for tag in project.tags %}
+                        <li class="work-card__tag">{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </article>
+{% endmacro %}

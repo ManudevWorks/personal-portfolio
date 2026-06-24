@@ -1,0 +1,19 @@
+{% extends "templates/side-to-side.njk" %}
+{% import "macros/section-heading.njk" as section_heading %}
+{% import "macros/work-card.njk" as work_card %}
+
+{% block id %}selected-work{% endblock %}
+
+{% block left %}
+    {{ section_heading.render(selected_work.heading) }}
+{% endblock %}
+
+{% block right %}{% endblock %}
+
+{% block bottom %}
+    <div class="selected-work__grid">
+        {% for project in selected_work.projects %}
+            {{ work_card.render(project, loop.index) }}
+        {% endfor %}
+    </div>
+{% endblock %}

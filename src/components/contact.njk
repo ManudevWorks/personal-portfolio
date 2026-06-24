@@ -1,0 +1,24 @@
+{% extends "templates/side-to-side.njk" %}
+{% import "macros/section-heading.njk" as section_heading %}
+{% import "macros/contact-row.njk" as contact_row %}
+
+{% block id %}contact{% endblock %}
+
+{% block left %}
+    <div class="contact__content">
+        {{ section_heading.render(contact.heading) }}
+
+        <ul class="contact__list list-unstyled">
+            {% for row in contact.links %}
+                {{ contact_row.render(row) }}
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+{% block right %}
+    <div class="contact__watermark" aria-hidden="true">
+        <span>Vamos</span>
+        <span>Conversar</span>
+    </div>
+{% endblock %}
