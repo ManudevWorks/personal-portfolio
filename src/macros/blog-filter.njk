@@ -1,0 +1,16 @@
+{% macro render(allTags, current_tag) %}
+    <nav class="blog-filters" aria-label="Filtrar por categoria">
+        <a
+            href="/blog/"
+            class="blog-filter{% if current_tag == 'all' %} is-active{% endif %}"
+            {% if current_tag == 'all' %}aria-current="page"{% endif %}
+        >Todos</a>
+        {% for tag in allTags %}
+            <a
+                href="/blog/tag/{{ tag }}/"
+                class="blog-filter{% if tag == current_tag %} is-active{% endif %}"
+                {% if tag == current_tag %}aria-current="page"{% endif %}
+            >{{ tag }}</a>
+        {% endfor %}
+    </nav>
+{% endmacro %}

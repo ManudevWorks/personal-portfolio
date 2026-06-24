@@ -1,0 +1,5 @@
+{% macro render(rating) %}
+    {% if rating != null %}
+        <span class="rating-badge">{{ rating }}/10</span>
+    {% endif %}
+{% endmacro %}

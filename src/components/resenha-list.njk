@@ -1,0 +1,19 @@
+{% import "macros/section-heading.njk" as section_heading %}
+{% import "macros/resenha-card.njk" as resenha_card %}
+{% import "macros/resenha-filter.njk" as resenha_filter %}
+
+<section id="resenhas" class="side-section">
+    <div class="section__wrapper">
+        {{ section_heading.render(resenhas.heading) }}
+    </div>
+
+    {{ resenha_filter.render(resenhas_data.types, current_type) }}
+
+    <div class="resenha-list">
+        {% for item in resenhas_data.items %}
+            {% if current_type == "all" or current_type == item.type %}
+                {{ resenha_card.render(item) }}
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

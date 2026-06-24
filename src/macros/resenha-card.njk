@@ -1,0 +1,45 @@
+{% import "macros/rating-badge.njk" as rating_badge %}
+
+{% macro render(item) %}
+    <article class="resenha-card resenha-card--{{ item.type }}" data-type="{{ item.type }}">
+        <a class="resenha-card__cover-link" href="/resenhas/{{ item.slug }}/" tabindex="-1" aria-hidden="true">
+            {% if item.cover %}
+                <img
+                    class="resenha-card__cover-img resenha-card__cover-img--{{ item.type }}"
+                    src="/assets/media/resenhas/{{ item.cover }}"
+                    alt="Capa de {{ item.title }}"
+                    loading="lazy"
+                >
+            {% else %}
+                <div class="resenha-card__cover-placeholder resenha-card__cover-placeholder--{{ item.type }}"></div>
+            {% endif %}
+        </a>
+        <div class="resenha-card__body">
+            <div class="resenha-card__meta-top">
+                <span class="resenha__type-pill resenha__type-pill--{{ item.type }}">
+                    {% if item.type == "musica" %}Música{% elif item.type == "livro" %}Livro{% else %}{{ item.type }}{% endif %}
+                </span>
+                {{ rating_badge.render(item.rating) }}
+            </div>
+            <h3 class="resenha-card__title">
+                <a href="/resenhas/{{ item.slug }}/">{{ item.title }}</a>
+            </h3>
+            {% if item.author %}
+                <p class="resenha-card__author">{{ item.author }}</p>
+            {% endif %}
+            {% if item.excerpt %}
+                <p class="resenha-card__excerpt">{{ item.excerpt }}</p>
+            {% endif %}
+            {% if item.dateDisplay %}
+                <time class="resenha-card__date" datetime="{{ item.date }}">{{ item.dateDisplay }}</time>
+            {% endif %}
+            {% if item.tags %}
+                <ul class="resenha-card__tags list-unstyled">
+                    {% for tag in item.tags %}
+                        <li class="resenha-card__tag">{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </article>
+{% endmacro %}

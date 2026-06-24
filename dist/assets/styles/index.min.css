@@ -334,3 +334,467 @@
   border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
   border-radius: 50%;
 }
+
+.blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: var(--space-lg);
+}
+
+.blog-filter {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-xxs) var(--space-sm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+.blog-filter:hover {
+  color: var(--foreground);
+  border-color: var(--foreground);
+}
+.blog-filter.is-active {
+  background-color: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+}
+
+.blog-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: var(--transition-fast);
+}
+.blog-card:hover {
+  border-color: var(--foreground);
+}
+.blog-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.blog-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+.blog-card__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+  margin: 0;
+}
+.blog-card__title a {
+  color: var(--foreground);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+.blog-card__title a:hover {
+  color: var(--accent);
+}
+.blog-card__date {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.blog-card__excerpt {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+.blog-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: 0;
+  margin: var(--space-xs) 0 0;
+}
+.blog-card__tag {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: var(--space-xxs) var(--space-sm);
+  font-size: var(--font-size-xs);
+  color: var(--foreground);
+  line-height: 1.5;
+}
+
+.post__header {
+  margin-bottom: var(--space-xl);
+}
+.post__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-tight);
+  margin: 0 0 var(--space-sm);
+  color: var(--foreground);
+}
+.post__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.post__date {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+}
+.post__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.post__tag {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: var(--space-xxs) var(--space-sm);
+  font-size: var(--font-size-xs);
+  color: var(--foreground);
+  line-height: 1.5;
+}
+.post__body {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 0 var(--space-lg) var(--space-xxl);
+}
+.post__body p, .post__body ul, .post__body ol, .post__body blockquote {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-loose);
+  color: var(--foreground);
+  margin-bottom: var(--space-lg);
+}
+.post__body h2, .post__body h3, .post__body h4 {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-light);
+  color: var(--foreground);
+  margin-top: var(--space-xxl);
+  margin-bottom: var(--space-md);
+}
+.post__body h2 {
+  font-size: var(--font-size-xxl);
+}
+.post__body h3 {
+  font-size: var(--font-size-xl);
+}
+.post__body h4 {
+  font-size: var(--font-size-lg);
+}
+.post__body a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.post__body code {
+  font-family: monospace;
+  font-size: 0.9em;
+  background: var(--secondary);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-sm);
+}
+.post__body pre {
+  background: var(--secondary);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin-bottom: var(--space-lg);
+}
+.post__body pre code {
+  background: none;
+  padding: 0;
+}
+.post__body blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: var(--space-lg);
+  color: var(--muted-foreground);
+  font-style: italic;
+}
+.post__body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--space-xxl) 0;
+}
+
+.resenha-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: var(--space-lg);
+}
+
+.resenha-filter {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-xxs) var(--space-sm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+.resenha-filter:hover {
+  color: var(--foreground);
+  border-color: var(--foreground);
+}
+.resenha-filter.is-active {
+  background-color: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
+}
+
+.resenha-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+}
+
+.resenha-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.resenha-card__cover-link {
+  display: block;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.resenha-card__cover-img, .resenha-card__cover-placeholder {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-md);
+  background-color: var(--muted);
+  transition: var(--transition-fast);
+}
+.resenha-card__cover-img--musica, .resenha-card__cover-placeholder--musica {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.resenha-card__cover-img--livro, .resenha-card__cover-placeholder--livro {
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+.resenha-card:hover .resenha-card__cover-img, .resenha-card:hover .resenha-card__cover-placeholder {
+  opacity: 0.85;
+}
+.resenha-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.resenha-card__meta-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.resenha-card__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+  margin: 0;
+}
+.resenha-card__title a {
+  color: var(--foreground);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+.resenha-card__title a:hover {
+  color: var(--accent);
+}
+.resenha-card__author {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+  margin: 0;
+}
+.resenha-card__excerpt {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+.resenha-card__date {
+  font-size: var(--font-size-xs);
+  color: var(--muted-foreground);
+}
+.resenha-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: 0;
+  margin: 0;
+}
+.resenha-card__tag {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: var(--space-xxs) var(--space-sm);
+  font-size: var(--font-size-xs);
+  color: var(--foreground);
+  line-height: 1.5;
+}
+
+.resenha__type-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-xxs) var(--space-sm);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+}
+.resenha__type-pill--musica {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+.resenha__type-pill--livro {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-xxs) var(--space-sm);
+  background-color: var(--foreground);
+  color: var(--background);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-display);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.resenha__header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-xxl);
+  align-items: start;
+  margin-bottom: var(--space-xxl);
+}
+.resenha__cover {
+  width: 280px;
+  flex-shrink: 0;
+}
+.resenha__cover-img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 32px rgba(26, 26, 26, 0.15);
+}
+.resenha__cover-img--musica {
+  aspect-ratio: 1/1;
+}
+.resenha__cover-img--livro {
+  aspect-ratio: 2/3;
+}
+.resenha__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-top: var(--space-md);
+}
+.resenha__meta-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.resenha__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-tight);
+  margin: 0;
+  color: var(--foreground);
+}
+.resenha__author {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  color: var(--muted-foreground);
+  margin: 0;
+}
+.resenha__date {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+}
+.resenha__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.resenha__tag {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: var(--space-xxs) var(--space-sm);
+  font-size: var(--font-size-xs);
+  color: var(--foreground);
+  line-height: 1.5;
+}
+.resenha__body {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 0 var(--space-lg) var(--space-xxl);
+}
+.resenha__body p, .resenha__body ul, .resenha__body ol, .resenha__body blockquote {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-loose);
+  color: var(--foreground);
+  margin-bottom: var(--space-lg);
+}
+.resenha__body h2, .resenha__body h3, .resenha__body h4 {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-light);
+  color: var(--foreground);
+  margin-top: var(--space-xxl);
+  margin-bottom: var(--space-md);
+}
+.resenha__body h2 {
+  font-size: var(--font-size-xxl);
+}
+.resenha__body h3 {
+  font-size: var(--font-size-xl);
+}
+.resenha__body a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.resenha__body code {
+  font-family: monospace;
+  font-size: 0.9em;
+  background: var(--secondary);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-sm);
+}
+.resenha__body blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: var(--space-lg);
+  color: var(--muted-foreground);
+  font-style: italic;
+}
+.resenha__body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--space-xxl) 0;
+}
+.resenha__body em {
+  font-style: italic;
+}

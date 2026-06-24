@@ -1,0 +1,26 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<article class="resenha" id="resenha">
+    <div class="section__wrapper resenha__header">
+        <div class="resenha__cover">
+            {% block resenha_cover %}{% endblock %}
+        </div>
+        <div class="resenha__info">
+            <div class="resenha__meta-top">
+                {% block resenha_type_pill %}{% endblock %}
+                {% block resenha_rating %}{% endblock %}
+            </div>
+            <h1 class="resenha__title">{% block resenha_title %}{% endblock %}</h1>
+            <p class="resenha__author">{% block resenha_author %}{% endblock %}</p>
+            <time class="resenha__date" datetime="{% block resenha_date_iso %}{% endblock %}">
+                {% block resenha_date_display %}{% endblock %}
+            </time>
+            {% block resenha_tags %}{% endblock %}
+        </div>
+    </div>
+    <div class="resenha__body">
+        {% block resenha_body %}{% endblock %}
+    </div>
+</article>
+{% endblock %}

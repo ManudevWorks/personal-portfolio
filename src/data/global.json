@@ -110,6 +110,24 @@
             }
         ]
     },
+    "blog": {
+        "heading": {
+            "title": {
+                "line_1": "Blog &",
+                "line_2": "Escritos"
+            },
+            "description": "Textos sobre desenvolvimento web, linguagem e as coisas que me fazem pensar."
+        }
+    },
+    "resenhas": {
+        "heading": {
+            "title": {
+                "line_1": "Resenhas &",
+                "line_2": "Leituras"
+            },
+            "description": "Discos e livros que merecem mais do que um like — merecem algumas palavras."
+        }
+    },
     "personal_projects": {
         "heading_left": {
             "title": {

@@ -78,7 +78,47 @@
 
         <main id="main-content">
             
-    <h1>Works</h1>
+<article class="post" id="post">
+    <div class="section__wrapper post__header">
+        <div class="section__title">
+            <h1 class="post__title">Por que Webpack + Nunjucks sem framework?</h1>
+            <div class="post__meta">
+                <time class="post__date" datetime="2026-06-10">
+                    10 de junho de 2026
+                </time>
+                <ul class="post__tags list-unstyled">
+    <li class="post__tag">web</li>
+    <li class="post__tag">arquitetura</li>
+</ul>
+            </div>
+        </div>
+    </div>
+    <div class="post__body">
+        
+<p>Quando comecei este portfólio, a pergunta óbvia era: <em>qual framework usar?</em></p>
+<p>Next.js? Astro? Hugo? Eleventy?</p>
+<p>Optei por nenhum deles — ao menos não de forma ortodoxa. Webpack e Nunjucks. Por quê?</p>
+<h2>Controle sem magia</h2>
+<p>Frameworks modernos são poderosos exatamente porque abstraem decisões. Mas abstrações têm custo: quando algo dá errado, é preciso entender a mágica para consertar.</p>
+<p>Com Webpack e Nunjucks, <strong>cada linha do build é minha</strong>. Sei exatamente o que entra, o que sai e por quê.</p>
+<h2>O custo real</h2>
+<p>Não é gratuito. Precisei escrever:</p>
+<ul>
+<li>Um pipeline de build manual</li>
+<li>Suporte a markdown via script pre-build</li>
+<li>Sistema de páginas dinâmicas por arquivos</li>
+<li>Filtragem de posts por categoria</li>
+</ul>
+<p>Nenhuma dessas tarefas é difícil — mas todas teriam sido “gratuitas” em um framework.</p>
+<h2>A troca que vale a pena</h2>
+<p>Para um portfólio pessoal — um projeto que existe para demonstrar <em>como</em> penso sobre código — faz sentido que a própria construção do site seja expressão dessa forma de pensar.</p>
+<p>A simplicidade não é preguiça. É escolha.</p>
+<hr>
+<p>No próximo post, vou detalhar a arquitetura de componentes Nunjucks usada aqui.</p>
+
+
+    </div>
+</article>
 
         </main>
         <footer id="footer" class="container">
