@@ -1,6 +1,7 @@
 /*!*****************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./src/assets/styles/index.scss ***!
   \*****************************************************************************************************************************/
+@charset "UTF-8";
 #hero-section {
   overflow: hidden;
 }
@@ -797,4 +798,197 @@
 }
 .resenha__body em {
   font-style: italic;
+}
+
+/* ─── Works page ─────────────────────────────────────────────── */
+.works-header {
+  padding: var(--space-xxl) var(--space-xxl) var(--space-xl);
+}
+.works-header .section__title {
+  max-width: 640px;
+}
+
+/* ─── Horizontal scroll container ────────────────────────────── */
+works-horizontal {
+  display: block; /* custom elements are inline by default */
+  width: 100%;
+}
+
+.works-pin {
+  width: 100%;
+  overflow: hidden; /* clips the track while it slides; GSAP pins this div, not the custom element */
+}
+
+.works-track {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  will-change: transform;
+}
+
+/* ─── Individual panel ────────────────────────────────────────── */
+.works-panel {
+  width: 100vw;
+  height: 100vh;
+  flex: 0 0 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+}
+.works-panel__screenshot {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--muted);
+}
+.works-panel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.works-panel__body {
+  padding: var(--space-xxl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  justify-content: center;
+}
+.works-panel__index {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-light);
+  color: var(--muted-foreground);
+  opacity: 0.25;
+  line-height: 1;
+  user-select: none;
+}
+.works-panel__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.works-panel__category {
+  font-size: var(--font-size-sm);
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.works-panel__year {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+}
+.works-panel__year::before {
+  content: "·";
+  margin-right: var(--space-sm);
+  color: var(--muted-foreground);
+}
+.works-panel__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: var(--font-weight-light);
+  color: var(--foreground);
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+.works-panel__description {
+  font-size: var(--font-size-md);
+  color: var(--muted-foreground);
+  line-height: var(--line-height-normal);
+  max-width: 42ch;
+  margin: 0;
+}
+.works-panel__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: 0;
+  margin: var(--space-xs) 0 0;
+}
+.works-panel__tag {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: var(--space-xxs) var(--space-sm);
+  font-size: var(--font-size-xs);
+  color: var(--foreground);
+  line-height: 1.5;
+}
+.works-panel {
+  /* alternate: screenshot on right for even panels */
+}
+.works-panel:nth-child(even) .works-panel__screenshot {
+  order: 2;
+}
+.works-panel:nth-child(even) .works-panel__body {
+  order: 1;
+}
+
+/* ─── Mobile / reduced-motion fallback ───────────────────────── */
+@media (max-width: 768px) {
+  .works-header {
+    padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  }
+  .works-pin {
+    overflow: visible;
+  }
+  .works-track {
+    flex-direction: column;
+  }
+  .works-panel {
+    width: 100%;
+    height: auto;
+    flex: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    border-bottom: var(--border-light);
+  }
+  .works-panel__screenshot {
+    height: 56vw;
+    min-height: 200px;
+  }
+  .works-panel__body {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  .works-panel:nth-child(even) .works-panel__screenshot {
+    order: 0;
+  }
+  .works-panel:nth-child(even) .works-panel__body {
+    order: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .works-pin {
+    overflow: visible;
+  }
+  .works-track {
+    flex-direction: column;
+    transform: none !important;
+  }
+  .works-panel {
+    width: 100%;
+    height: auto;
+    flex: none;
+    grid-template-columns: 1fr;
+    border-bottom: var(--border-light);
+  }
+  .works-panel__screenshot {
+    height: 50vw;
+    min-height: 200px;
+  }
+  .works-panel__body {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  .works-panel__reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .works-panel:nth-child(even) .works-panel__screenshot {
+    order: 0;
+  }
+  .works-panel:nth-child(even) .works-panel__body {
+    order: 0;
+  }
 }

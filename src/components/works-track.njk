@@ -1,0 +1,11 @@
+{% import "macros/works-panel.njk" as works_panel %}
+
+<works-horizontal>
+    <div class="works-pin">
+        <div class="works-track">
+            {% for project in works.projects %}
+                {{ works_panel.render(project, loop.index) }}
+            {% endfor %}
+        </div>
+    </div>
+</works-horizontal>

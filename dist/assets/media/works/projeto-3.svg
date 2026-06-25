@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C65D3B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A04A2E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g3)" />
+  <rect x="80" y="80" width="320" height="4" fill="#FAF8F5" opacity="0.6" />
+  <text x="80" y="200" font-family="serif" font-size="96" font-weight="300" fill="#FAF8F5" opacity="0.15">03</text>
+  <text x="80" y="480" font-family="serif" font-size="52" font-weight="300" fill="#FAF8F5">Projeto 3</text>
+  <text x="80" y="540" font-family="sans-serif" font-size="18" font-weight="400" fill="rgba(250,248,245,0.7)">Site Institucional · 2024</text>
+  <rect x="0" y="0" width="1200" height="800" fill="none" stroke="#FAF8F5" stroke-width="2" opacity="0.1" />
+</svg>

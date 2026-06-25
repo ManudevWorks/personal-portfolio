@@ -1,5 +1,16 @@
 {% extends "layouts/base.njk" %}
+{% import "macros/section-heading.njk" as section_heading %}
 
 {% block content %}
-    <h1>Works</h1>
+    <div class="works-header side-section">
+        <div class="section__wrapper">
+            {{ section_heading.render(works.heading) }}
+        </div>
+    </div>
+
+    {% include "components/works-track.njk" %}
+{% endblock %}
+
+{% block scripts %}
+    <script src="/assets/scripts/works.min.js" defer></script>
 {% endblock %}
