@@ -1,3 +1,14 @@
+@use "@styles/abstracts" as *;
+
+#resenhas {
+    margin-top: calc(spacing(xxl)* 2);
+
+    .section__title,
+    .section__description {
+        margin-bottom: 0;
+    }
+}
+
 // ── Resenhas listing ──────────────────────────────────────────────────────────
 
 .resenha-filters {
@@ -35,6 +46,14 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
     padding: var(--space-lg);
+
+    @include respond-below('lg') {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-below('sm') {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 // ── Resenha card ──────────────────────────────────────────────────────────────

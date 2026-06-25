@@ -1,3 +1,4 @@
+@use "@styles/abstracts" as *;
 @use "@styles/components/_hero";
 @use "@styles/components/_about-section";
 @use "@styles/components/_worked-with";
@@ -7,3 +8,4 @@
 @use "@styles/components/_blog";
 @use "@styles/components/_resenhas";
 @use "@styles/components/_works";
+@use "@styles/components/_posts";

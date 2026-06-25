@@ -1,0 +1,6 @@
+/// Abstracts barrel — forward everything so consumers write:
+///   @use "@styles/abstracts" as *;
+/// This emits no CSS on its own.
+
+@forward "breakpoints";
+@forward "functions";

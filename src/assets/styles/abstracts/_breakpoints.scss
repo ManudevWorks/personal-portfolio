@@ -1,0 +1,38 @@
+@use "sass:map";
+
+/// Breakpoint scale — mobile-first, standard widths.
+/// Use respond-to() for min-width queries (preferred).
+/// Use respond-below() for max-width queries (avoid when possible).
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+);
+
+/// Emit a mobile-first min-width media query.
+/// @param {string} $key - one of sm | md | lg | xl
+/// @example
+///   @include respond-to('lg') { display: flex; }
+@mixin respond-to($key) {
+  @if not map.has-key($breakpoints, $key) {
+    @error "Unknown breakpoint `#{$key}`. Available: #{map.keys($breakpoints)}.";
+  }
+  @media (min-width: map.get($breakpoints, $key)) {
+    @content;
+  }
+}
+
+/// Emit a desktop-first max-width media query.
+/// Subtracts 0.02px from the breakpoint to avoid overlap at the boundary.
+/// @param {string} $key - one of sm | md | lg | xl
+/// @example
+///   @include respond-below('md') { flex-direction: column; }
+@mixin respond-below($key) {
+  @if not map.has-key($breakpoints, $key) {
+    @error "Unknown breakpoint `#{$key}`. Available: #{map.keys($breakpoints)}.";
+  }
+  @media (max-width: map.get($breakpoints, $key) - 0.02px) {
+    @content;
+  }
+}

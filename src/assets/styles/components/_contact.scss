@@ -1,3 +1,5 @@
+@use "@styles/abstracts" as *;
+
 #contact {
     position: relative;
     overflow: hidden;
@@ -8,10 +10,18 @@
 }
 
 .contact {
+    &__content {
+        width: 100%;
+    }
+
     &__list {
         margin-top: var(--space-xl);
         width: 100%;
         flex: 1;
+
+        @include respond-to('lg') {
+            max-width: 50%;
+        }
     }
 
     &__row {
@@ -19,11 +29,6 @@
         align-items: center;
         gap: var(--space-sm);
         padding: var(--space-md) 0;
-        border-bottom: 1px solid var(--border);
-
-        &:first-child {
-            border-top: 1px solid var(--border);
-        }
     }
 
     &__label {
@@ -57,6 +62,12 @@
         color: color-mix(in srgb, var(--accent) 15%, transparent);
         user-select: none;
         pointer-events: none;
+    }
+
+    @include respond-to('md') {
+        &__content .section__description {
+            max-width: 50%;
+        }
     }
 }
 

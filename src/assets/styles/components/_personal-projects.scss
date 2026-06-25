@@ -1,3 +1,5 @@
+@use "@styles/abstracts" as *;
+
 .section {
     &__content-left,
     &__content-right {
@@ -8,8 +10,14 @@
         }
     }
 
+    &__content-left {
+        @include respond-below('lg') {
+            margin-bottom: spacing(xxl);
+        }
+    }
+
     &__language-item {
-        margin-bottom: var(--space-lg);
+        margin-bottom: spacing(xl);
     }
 
     &__language-name {
@@ -62,6 +70,11 @@
         font-weight: var(--font-weight-light);
         color: var(--foreground);
         margin-bottom: var(--space-xs);
+        margin-top: 0;
+
+        @include respond-below('lg') {
+            font-size: font-size(lg);
+        }
     }
 
     &__project-description {

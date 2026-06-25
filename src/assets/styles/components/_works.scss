@@ -1,7 +1,11 @@
+@use "@styles/abstracts" as *;
+
 /* ─── Works page ─────────────────────────────────────────────── */
 
 .works-header {
-    padding: var(--space-xxl) var(--space-xxl) var(--space-xl);
+    margin-top: calc(spacing(xxl) * 2);
+    margin-bottom: spacing(xl);
+    min-height: auto;
 
     .section__title {
         max-width: 640px;
@@ -139,11 +143,7 @@ works-horizontal {
 
 /* ─── Mobile / reduced-motion fallback ───────────────────────── */
 
-@media (max-width: 768px) {
-    .works-header {
-        padding: var(--space-xl) var(--space-lg) var(--space-lg);
-    }
-
+@include respond-below('md') {
     .works-pin {
         overflow: visible;
     }
