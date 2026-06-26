@@ -25,6 +25,7 @@
         </main>
         {% include "components/footer.njk" %}
         {% include "components/schema.njk" %}
+        {% block page_schema %}{% endblock %}
         {% block scripts %}{% endblock %}
     </body>
 </html>

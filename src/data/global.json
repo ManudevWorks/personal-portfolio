@@ -39,36 +39,32 @@
     "worked_with": {
         "heading": {
             "title": {
-                "line_1": "Marcas",
-                "line_2": "atendidas"
+                "line_1": "Projetos com",
+                "line_2": "minha participação"
             },
             "description": ""
         },
         "brands": [
-            "Stanley",
-            "Gummy",
-            "Bold Snacks",
-            "Stanley",
-            "Gummy",
-            "Bold Snacks",
-            "Stanley",
-            "Gummy",
-            "Bold Snacks"
+            { "name": "Stanley" },
+            { "name": "Gummy" },
+            { "name": "Bold Snacks" },
+            { "name": "Prohall" },
+            { "name": "Woly" },
+            { "name": "La Ganexa" }
         ]
     },
     "contact": {
         "heading": {
             "title": {
-                "line_1": "Vamos Criar",
-                "line_2": "Algo Incrível"
+                "line_1": "Social",
+                "line_2": "Media"
             },
-            "description": "Estou sempre interessado em ouvir sobre novos projetos e oportunidades. Se tiver uma dúvida ou quiser apenas dizer oi, responderei em breve."
+            "description": ""
         },
         "links": [
-            { "label": "Email", "value": "hello@example.com", "href": "mailto:hello@example.com" },
+            { "label": "Email", "value": "hey@manuworks.dev", "href": "mailto:hey@manuworks.dev" },
             { "label": "LinkedIn", "value": "/in/yourprofile", "href": "" },
-            { "label": "GitHub", "value": "@yourusername", "href": "" },
-            { "label": "Twitter", "value": "@yourusername", "href": "" }
+            { "label": "GitHub", "value": "@ManudevWorks", "href": "https://github.com/ManudevWorks" }
         ]
     },
     "selected_work": {
@@ -77,38 +73,37 @@
                 "line_1": "Trabalhos",
                 "line_2": "Selecionados"
             },
-            "description": "Uma coleção de projetos que demonstram minha abordagem ao design e desenvolvimento."
+            "description": "Uma coleção de projetos que demonstram minha abordagem em design e desenvolvimento."
         },
         "projects": [
             {
-                "title": "Projeto 1",
-                "year": "2025",
+                "title": "Greek Mathesis",
+                "year": "2022",
                 "category": "Aplicação Web",
-                "description": "Plataforma de análise abrangente para equipes modernas com colaboração em tempo real.",
-                "tags": ["React", "Node.js", "WebSocket"]
+                "description": "Plataforma de ensino de Grego Antigo de forma gamificada.",
+                "tags": ["Svelte", "Node.js", "Gamificação"],
+                "image": "images/greek-mathesis.png",
+                "link": "https://greek-mathesis.vercel.app/"
             },
             {
-                "title": "Projeto 2",
-                "year": "2024",
-                "category": "Design de Sistema",
-                "description": "Design system acessível e escalável utilizado como base de múltiplos produtos digitais.",
-                "tags": ["TypeScript", "Storybook", "SCSS"]
-            },
-            {
-                "title": "Projeto 3",
-                "year": "2024",
-                "category": "Site Institucional",
-                "description": "Site institucional com foco em performance, acessibilidade e experiência editorial.",
-                "tags": ["Next.js", "CMS", "SEO"]
-            },
-            {
-                "title": "Projeto 4",
-                "year": "2023",
-                "category": "Aplicação Mobile",
-                "description": "Aplicativo de gestão de tarefas com sincronização offline e notificações inteligentes.",
-                "tags": ["React Native", "SQLite", "Push"]
+                "title": "Mythos",
+                "year": "2026",
+                "category": "Dev Setup",
+                "description": "Uma estrutura limpa para criar sites rápidos e bem-acabados, com templates organizados, estilos em Sass, scripts modulares e recursos otimizados.",
+                "tags": ["Nunjucks", "Webpack", "SCSS"],
+                "image": "images/mythos.png",
+                "link": "https://github.com/ManudevWorks/mythos"
             }
         ]
+    },
+    "latest_content": {
+        "heading": {
+            "title": {
+                "line_1": "Últimas",
+                "line_2": "Publicações"
+            },
+            "description": ""
+        }
     },
     "blog": {
         "heading": {
@@ -138,36 +133,22 @@
         },
         "projects": [
             {
-                "title": "Projeto 1",
-                "year": "2025",
+                "title": "Greek Mathesis",
+                "year": "2022",
                 "category": "Aplicação Web",
-                "description": "Plataforma de análise abrangente para equipes modernas com colaboração em tempo real.",
-                "tags": ["React", "Node.js", "WebSocket"],
-                "image": "projeto-1.svg"
+                "description": "Plataforma de ensino de Grego Antigo de forma gamificada.",
+                "tags": ["Svelte", "Node.js", "Gamificação"],
+                "image": "images/greek-mathesis.png",
+                "link": "https://greek-mathesis.vercel.app/"
             },
             {
-                "title": "Projeto 2",
-                "year": "2024",
-                "category": "Design de Sistema",
-                "description": "Design system acessível e escalável utilizado como base de múltiplos produtos digitais.",
-                "tags": ["TypeScript", "Storybook", "SCSS"],
-                "image": "projeto-2.svg"
-            },
-            {
-                "title": "Projeto 3",
-                "year": "2024",
-                "category": "Site Institucional",
-                "description": "Site institucional com foco em performance, acessibilidade e experiência editorial.",
-                "tags": ["Next.js", "CMS", "SEO"],
-                "image": "projeto-3.svg"
-            },
-            {
-                "title": "Projeto 4",
-                "year": "2023",
-                "category": "Aplicação Mobile",
-                "description": "Aplicativo de gestão de tarefas com sincronização offline e notificações inteligentes.",
-                "tags": ["React Native", "SQLite", "Push"],
-                "image": "projeto-4.svg"
+                "title": "Mythos",
+                "year": "2026",
+                "category": "Dev Setup",
+                "description": "Uma estrutura limpa para criar sites rápidos e bem-acabados, com templates organizados, estilos em Sass, scripts modulares e recursos otimizados.",
+                "tags": ["Nunjucks", "Webpack", "SCSS"],
+                "image": "images/mythos.png",
+                "link": "https://github.com/ManudevWorks/mythos"
             }
         ]
     },
@@ -189,18 +170,18 @@
         "projects": [
             {
                 "title": "Contribuições Open Source",
-                "description": "Contribuindo para design systems e bibliotecas de componentes React usadas por milhares de desenvolvedores.",
-                "tags": ["React", "TypeScript", "Open Source"]
+                "description": "Contribuindo para comunidade em projetos Open Source para aprender e retribuir.",
+                "tags": ["Open Source", "FOSS"]
             },
             {
                 "title": "Projetos de Linguística",
-                "description": "Pesquisa e escrita sobre linguística aplicada, etimologia e a estrutura das línguas naturais.",
-                "tags": ["Linguística", "Escrita", "Pesquisa"]
+                "description": "Pesquisa e escrita sobre linguística aplicada, etimologia e a estrutura das línguas modernas e antigas.",
+                "tags": ["Linguística", "Escrita", "Estudos"]
             },
             {
                 "title": "Experimentos Criativos",
                 "description": "Explorando a interseção entre arte, tecnologia e design — do generativo ao artesanal.",
-                "tags": ["Design", "Criatividade", "Arte"]
+                "tags": ["Design", "Criatividade", "Arte", "UX"]
             }
         ],
         "languages": [

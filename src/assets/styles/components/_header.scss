@@ -1,5 +1,13 @@
 @use "@styles/abstracts" as *;
 
+#hamburger {
+  display: none;
+}
+
+html:has(#hamburger:checked) {
+  overflow: hidden;
+}
+
 #header {
   position: fixed;
   padding: var(--space-lg);
@@ -47,7 +55,6 @@
       color: var(--accent)
     }
 
-
     @include respond-to('sm') {
       &:hover .hide {
         opacity: 1;
@@ -59,20 +66,13 @@
     }
   }
 
-  .header-navigation ul {
-    display: none;
-    gap: var(--space-lg);
-    justify-content: flex-end;
-
-
-    a {
-      transition: all .3s ease;
-    }
-
-    & a:hover {
-      color: var(--accent);
-    }
+  .clock {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: var(--font-size-lg);
   }
+
+  // ── Mobile navigation ─────────────────────────────────────────────────────
 
   .mobile-navigation {
     display: flex;
@@ -86,28 +86,91 @@
     }
   }
 
-  .clock {
-    text-align: center;
-    font-family: var(--font-display);
-    font-size: var(--font-size-lg);
-  }
-
-  .mobile-navigation {
-    justify-content: flex-end;
-  }
-
-  @include respond-to('lg') {
-    .header-navigation ul {
-      display: flex;
-    }
-
-    .mobile-navigation {
-      display: none;
-    }
-  }
+  // ── Drawer (mobile < lg) ──────────────────────────────────────────────────
 
   @include respond-below('lg') {
     padding-top: spacing(sm);
     padding-bottom: spacing(sm);
+
+    .header-navigation__list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xl);
+      padding: var(--space-xxl) var(--space-xl);
+      position: fixed;
+      inset: 0 0 0 auto;
+      width: min(80vw, 320px);
+      height: 100dvh;
+      background: var(--background);
+      border-left: 1px solid var(--border);
+      z-index: z(modal);
+      transform: translateX(100%);
+      transition: transform .3s ease;
+      margin: 0;
+
+      a {
+        font-size: var(--font-size-lg);
+        font-family: var(--font-display);
+        font-weight: var(--font-weight-light);
+        text-decoration: none;
+        color: var(--foreground);
+        padding: var(--space-sm) 0;
+        display: block;
+        transition: color .2s ease;
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
+
+    .nav-backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+      z-index: z(overlay);
+      cursor: pointer;
+    }
+
+    #hamburger:checked ~ .header-navigation__list {
+      transform: translateX(0);
+    }
+
+    #hamburger:checked ~ .nav-backdrop {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  // ── Desktop nav (>= lg) ───────────────────────────────────────────────────
+
+  @include respond-to('lg') {
+    .mobile-navigation {
+      display: none;
+    }
+
+    .nav-backdrop {
+      display: none;
+    }
+
+    .header-navigation__list {
+      display: flex;
+      gap: var(--space-lg);
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+
+      a {
+        transition: color .3s ease;
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
   }
 }

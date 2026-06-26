@@ -11,6 +11,32 @@
     {% include "components/works-track.njk" %}
 {% endblock %}
 
+{% block page_schema %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Portfólio de Trabalhos",
+    "url": "{{ site.canonical_url }}/works/",
+    "itemListElement": [
+        {% for project in works.projects %}
+        {
+            "@type": "ListItem",
+            "position": {{ loop.index }},
+            "item": {
+                "@type": "CreativeWork",
+                "name": "{{ project.title }}",
+                "description": "{{ project.description }}"{% if project.image %},
+                "image": "{{ site.canonical_url }}/assets/media/works/{{ project.image }}"{% endif %}{% if project.link %},
+                "url": "{{ project.link }}"{% endif %}
+            }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}
+</script>
+{% endblock %}
+
 {% block scripts %}
     <script src="/assets/scripts/works.min.js" defer></script>
 {% endblock %}

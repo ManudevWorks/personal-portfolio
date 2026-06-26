@@ -9,13 +9,14 @@
             <clock-component initial-type="0"></clock-component>
         </div>
         <nav class="header-navigation">
+            <input name="hamburger" id="hamburger" type="checkbox" />
             <div class="mobile-navigation">
-                <input name="hambuger" id="hamburger" type="checkbox" />
-                <label for="hamburger">
+                <label for="hamburger" aria-label="Abrir menu">
                     {% include "components/icons/hamburger.njk" %}
                 </label>
             </div>
-            <ul class="list-unstyled">
+            <label for="hamburger" class="nav-backdrop" aria-hidden="true"></label>
+            <ul class="header-navigation__list list-unstyled">
                 <li>
                     <a href="/works" title="">Works</a>
                 </li>

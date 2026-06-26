@@ -9,6 +9,44 @@
     }
 }
 
+// ── Resenhas sections ─────────────────────────────────────────────────────────
+
+.resenha-section {
+    padding: 0 var(--space-lg) var(--space-xxl);
+    margin-top: spacing(xl);
+
+    & + & {
+        border-top: 1px solid var(--border);
+        padding-top: var(--space-xxl);
+    }
+
+    &__header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: var(--space-lg);
+    }
+
+    &__title {
+        font-family: var(--font-display);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-light);
+        color: var(--muted-foreground);
+        margin: 0;
+    }
+
+    &__link {
+        font-size: var(--font-size-sm);
+        color: var(--muted-foreground);
+        text-decoration: none;
+        transition: var(--transition-fast);
+
+        &:hover {
+            color: var(--foreground);
+        }
+    }
+}
+
 // ── Resenhas listing ──────────────────────────────────────────────────────────
 
 .resenha-filters {
@@ -45,7 +83,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
-    padding: var(--space-lg);
 
     @include respond-below('lg') {
         grid-template-columns: repeat(2, 1fr);
@@ -143,6 +180,7 @@
     &__date {
         font-size: var(--font-size-xs);
         color: var(--muted-foreground);
+        margin-top: spacing(sm);
     }
 
     &__tags {
@@ -210,11 +248,22 @@
         gap: var(--space-xxl);
         align-items: start;
         margin-bottom: var(--space-xxl);
+        margin-top: calc(spacing(xxl) * 2);
+
+        @include respond-below('lg') {
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
 
     &__cover {
         width: 280px;
         flex-shrink: 0;
+
+        @include respond-below('lg') {
+            display: block;
+            margin: 0 auto;
+        }
     }
 
     &__cover-img {

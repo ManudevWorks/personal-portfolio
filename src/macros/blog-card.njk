@@ -1,5 +1,15 @@
 {% macro render(post) %}
     <article class="blog-card" data-tags="{{ post.tags | join(' ') }}">
+        {% if post.thumbnail %}
+            <div class="blog-card__thumbnail">
+                <img
+                    class="blog-card__thumbnail-img"
+                    src="/assets/media/blog/{{ post.thumbnail }}"
+                    alt="{{ post.title }}"
+                    loading="lazy"
+                >
+            </div>
+        {% endif %}
         <div class="blog-card__body">
             <div class="blog-card__header">
                 <h3 class="blog-card__title">

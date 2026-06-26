@@ -53,15 +53,16 @@
             <clock-component initial-type="0"></clock-component>
         </div>
         <nav class="header-navigation">
+            <input name="hamburger" id="hamburger" type="checkbox" />
             <div class="mobile-navigation">
-                <input name="hambuger" id="hamburger" type="checkbox" />
-                <label for="hamburger">
+                <label for="hamburger" aria-label="Abrir menu">
                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 17H20M4 12H20M4 7H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                 </label>
             </div>
-            <ul class="list-unstyled">
+            <label for="hamburger" class="nav-backdrop" aria-hidden="true"></label>
+            <ul class="header-navigation__list list-unstyled">
                 <li>
                     <a href="/works" title="">Works</a>
                 </li>
@@ -103,7 +104,7 @@
                 <div class="perks">
                     <div class="perk">
                         <span class="perk-title">
-                            6+
+                            7+
                         </span>
                         <span class="text">
                             Anos
@@ -111,7 +112,7 @@
                     </div>
                     <div class="perk">
                         <span class="perk-title">
-                            30+
+                            50+
                         </span>
                         <span class="text">
                             Projetos
@@ -122,7 +123,7 @@
                             20+
                         </span>
                         <span class="text">
-                            Clientes
+                            Soluções
                         </span>
                     </div>
                 </div>
@@ -194,14 +195,14 @@
         <h2 class="section__heading">
             
                 
-                Marcas
+                Projetos com
                 
                 <br>
             
                 
                     <span class="text-accent">
                 
-                atendidas
+                minha participação
                 
                     </span>
                 
@@ -217,57 +218,39 @@
     <div class="section__brands-grid">
         
             <div class="section__brands-grid-item">
-                <span class="text">
-                    Stanley
-                </span>
+                
+                    <span class="text">Stanley</span>
+                
             </div>
         
             <div class="section__brands-grid-item">
-                <span class="text">
-                    Gummy
-                </span>
+                
+                    <span class="text">Gummy</span>
+                
             </div>
         
             <div class="section__brands-grid-item">
-                <span class="text">
-                    Bold Snacks
-                </span>
+                
+                    <span class="text">Bold Snacks</span>
+                
             </div>
         
             <div class="section__brands-grid-item">
-                <span class="text">
-                    Stanley
-                </span>
+                
+                    <span class="text">Prohall</span>
+                
             </div>
         
             <div class="section__brands-grid-item">
-                <span class="text">
-                    Gummy
-                </span>
+                
+                    <span class="text">Woly</span>
+                
             </div>
         
             <div class="section__brands-grid-item">
-                <span class="text">
-                    Bold Snacks
-                </span>
-            </div>
-        
-            <div class="section__brands-grid-item">
-                <span class="text">
-                    Stanley
-                </span>
-            </div>
-        
-            <div class="section__brands-grid-item">
-                <span class="text">
-                    Gummy
-                </span>
-            </div>
-        
-            <div class="section__brands-grid-item">
-                <span class="text">
-                    Bold Snacks
-                </span>
+                
+                    <span class="text">La Ganexa</span>
+                
             </div>
         
     </div>
@@ -566,15 +549,13 @@
     <article class="section__project">
         <div class="section__project-body">
             <h3 class="section__project-title">Contribuições Open Source</h3>
-            <p class="section__project-description">Contribuindo para design systems e bibliotecas de componentes React usadas por milhares de desenvolvedores.</p>
+            <p class="section__project-description">Contribuindo para comunidade em projetos Open Source para aprender e retribuir.</p>
             
             <ul class="section__project-tags list-unstyled">
                 
-                    <li class="section__project-tag">React</li>
-                
-                    <li class="section__project-tag">TypeScript</li>
-                
                     <li class="section__project-tag">Open Source</li>
+                
+                    <li class="section__project-tag">FOSS</li>
                 
             </ul>
             
@@ -587,7 +568,7 @@
     <article class="section__project">
         <div class="section__project-body">
             <h3 class="section__project-title">Projetos de Linguística</h3>
-            <p class="section__project-description">Pesquisa e escrita sobre linguística aplicada, etimologia e a estrutura das línguas naturais.</p>
+            <p class="section__project-description">Pesquisa e escrita sobre linguística aplicada, etimologia e a estrutura das línguas modernas e antigas.</p>
             
             <ul class="section__project-tags list-unstyled">
                 
@@ -595,7 +576,7 @@
                 
                     <li class="section__project-tag">Escrita</li>
                 
-                    <li class="section__project-tag">Pesquisa</li>
+                    <li class="section__project-tag">Estudos</li>
                 
             </ul>
             
@@ -617,6 +598,8 @@
                     <li class="section__project-tag">Criatividade</li>
                 
                     <li class="section__project-tag">Arte</li>
+                
+                    <li class="section__project-tag">UX</li>
                 
             </ul>
             
@@ -655,7 +638,7 @@
         </h2>
         
             <p class="section__description">
-                Uma coleção de projetos que demonstram minha abordagem ao design e desenvolvimento.
+                Uma coleção de projetos que demonstram minha abordagem em design e desenvolvimento.
             </p>
         
     </div>
@@ -669,30 +652,45 @@
         
             
     <article class="work-card">
+        
+            <a class="work-card__link" href="https://greek-mathesis.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto Greek Mathesis"></a>
+        
         <div class="work-card__media">
-            <span class="work-card__index">1</span>
+            
+                <img
+                    class="work-card__img"
+                    src="/assets/media/images/greek-mathesis.png"
+                    alt="Greek Mathesis"
+                    loading="lazy"
+                >
+                <div class="work-card__overlay" aria-hidden="true"></div>
+            
         </div>
         <div class="work-card__body">
             <div class="work-card__header">
-                <h3 class="work-card__title">Projeto 1</h3>
+                <h3 class="work-card__title">
+                    
+                        <a href="https://greek-mathesis.vercel.app/" target="_blank" rel="noopener noreferrer">Greek Mathesis</a>
+                    
+                </h3>
                 
-                    <span class="work-card__year">2025</span>
+                    <span class="work-card__year">2022</span>
                 
             </div>
             
                 <span class="work-card__category">Aplicação Web</span>
             
             
-                <p class="work-card__description">Plataforma de análise abrangente para equipes modernas com colaboração em tempo real.</p>
+                <p class="work-card__description">Plataforma de ensino de Grego Antigo de forma gamificada.</p>
             
             
                 <ul class="work-card__tags list-unstyled">
                     
-                        <li class="work-card__tag">React</li>
+                        <li class="work-card__tag">Svelte</li>
                     
                         <li class="work-card__tag">Node.js</li>
                     
-                        <li class="work-card__tag">WebSocket</li>
+                        <li class="work-card__tag">Gamificação</li>
                     
                 </ul>
             
@@ -702,28 +700,43 @@
         
             
     <article class="work-card">
+        
+            <a class="work-card__link" href="https://github.com/ManudevWorks/mythos" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto Mythos"></a>
+        
         <div class="work-card__media">
-            <span class="work-card__index">2</span>
+            
+                <img
+                    class="work-card__img"
+                    src="/assets/media/images/mythos.png"
+                    alt="Mythos"
+                    loading="lazy"
+                >
+                <div class="work-card__overlay" aria-hidden="true"></div>
+            
         </div>
         <div class="work-card__body">
             <div class="work-card__header">
-                <h3 class="work-card__title">Projeto 2</h3>
+                <h3 class="work-card__title">
+                    
+                        <a href="https://github.com/ManudevWorks/mythos" target="_blank" rel="noopener noreferrer">Mythos</a>
+                    
+                </h3>
                 
-                    <span class="work-card__year">2024</span>
+                    <span class="work-card__year">2026</span>
                 
             </div>
             
-                <span class="work-card__category">Design de Sistema</span>
+                <span class="work-card__category">Dev Setup</span>
             
             
-                <p class="work-card__description">Design system acessível e escalável utilizado como base de múltiplos produtos digitais.</p>
+                <p class="work-card__description">Uma estrutura limpa para criar sites rápidos e bem-acabados, com templates organizados, estilos em Sass, scripts modulares e recursos otimizados.</p>
             
             
                 <ul class="work-card__tags list-unstyled">
                     
-                        <li class="work-card__tag">TypeScript</li>
+                        <li class="work-card__tag">Nunjucks</li>
                     
-                        <li class="work-card__tag">Storybook</li>
+                        <li class="work-card__tag">Webpack</li>
                     
                         <li class="work-card__tag">SCSS</li>
                     
@@ -733,72 +746,131 @@
     </article>
 
         
+    </div>
+
+</section>
+    <section id="latest-content" class="side-section">
+    <div class="section__wrapper">
+        
+    
+    <div class="section__title">
+        <h2 class="section__heading">
             
-    <article class="work-card">
-        <div class="work-card__media">
-            <span class="work-card__index">3</span>
-        </div>
-        <div class="work-card__body">
-            <div class="work-card__header">
-                <h3 class="work-card__title">Projeto 3</h3>
                 
-                    <span class="work-card__year">2024</span>
+                Últimas
                 
-            </div>
+                <br>
             
-                <span class="work-card__category">Site Institucional</span>
+                
+                    <span class="text-accent">
+                
+                Publicações
+                
+                    </span>
+                
+                
             
-            
-                <p class="work-card__description">Site institucional com foco em performance, acessibilidade e experiência editorial.</p>
-            
-            
-                <ul class="work-card__tags list-unstyled">
-                    
-                        <li class="work-card__tag">Next.js</li>
-                    
-                        <li class="work-card__tag">CMS</li>
-                    
-                        <li class="work-card__tag">SEO</li>
-                    
-                </ul>
-            
-        </div>
-    </article>
+        </h2>
+        
+    </div>
+
+
 
         
-            
-    <article class="work-card">
-        <div class="work-card__media">
-            <span class="work-card__index">4</span>
-        </div>
-        <div class="work-card__body">
-            <div class="work-card__header">
-                <h3 class="work-card__title">Projeto 4</h3>
-                
-                    <span class="work-card__year">2023</span>
-                
-            </div>
-            
-                <span class="work-card__category">Aplicação Mobile</span>
-            
-            
-                <p class="work-card__description">Aplicativo de gestão de tarefas com sincronização offline e notificações inteligentes.</p>
-            
-            
-                <ul class="work-card__tags list-unstyled">
-                    
-                        <li class="work-card__tag">React Native</li>
-                    
-                        <li class="work-card__tag">SQLite</li>
-                    
-                        <li class="work-card__tag">Push</li>
-                    
-                </ul>
-            
-        </div>
-    </article>
+    </div>
+    
+    <div class="latest-content__grid">
 
-        
+        <div class="latest-content__col">
+            <div class="latest-content__col-header">
+                <span class="latest-content__col-title">Blog</span>
+                <a class="latest-content__col-link" href="/blog/">Ver todos</a>
+            </div>
+            <ul class="latest-content__list list-unstyled">
+                
+                    
+                        <li class="latest-content__item">
+                            <a class="latest-content__item-thumb" href="/blog/hello-world/" tabindex="-1" aria-hidden="true">
+                                
+                                    <div class="latest-content__item-placeholder latest-content__item-placeholder--wide"></div>
+                                
+                            </a>
+                            <div class="latest-content__item-body">
+                                <a class="latest-content__item-title" href="/blog/hello-world/">Olá, mundo — estreando o blog</a>
+                                
+                                    <time class="latest-content__item-meta" datetime="2026-06-20">20 de junho de 2026</time>
+                                
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="latest-content__item">
+                            <a class="latest-content__item-thumb" href="/blog/sobre-webpack-e-nunjucks/" tabindex="-1" aria-hidden="true">
+                                
+                                    <div class="latest-content__item-placeholder latest-content__item-placeholder--wide"></div>
+                                
+                            </a>
+                            <div class="latest-content__item-body">
+                                <a class="latest-content__item-title" href="/blog/sobre-webpack-e-nunjucks/">Por que Webpack + Nunjucks sem framework?</a>
+                                
+                                    <time class="latest-content__item-meta" datetime="2026-06-10">10 de junho de 2026</time>
+                                
+                            </div>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+
+        <div class="latest-content__col">
+            <div class="latest-content__col-header">
+                <span class="latest-content__col-title">Resenhas</span>
+                <a class="latest-content__col-link" href="/resenhas/">Ver todos</a>
+            </div>
+            <ul class="latest-content__list list-unstyled">
+                
+                    
+                        <li class="latest-content__item">
+                            <a class="latest-content__item-thumb" href="/resenhas/thrak/" tabindex="-1" aria-hidden="true">
+                                
+                                    <img
+                                        src="/assets/media/resenhas/king-crimson-thrak.jpeg"
+                                        alt="Thrak"
+                                        loading="lazy"
+                                        class="latest-content__item-img latest-content__item-img--musica"
+                                    >
+                                
+                            </a>
+                            <div class="latest-content__item-body">
+                                <a class="latest-content__item-title" href="/resenhas/thrak/">Thrak</a>
+                                <span class="latest-content__item-meta">King Crimson</span>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="latest-content__item">
+                            <a class="latest-content__item-thumb" href="/resenhas/santo-guerreiro/" tabindex="-1" aria-hidden="true">
+                                
+                                    <img
+                                        src="/assets/media/resenhas/santo-guerreiro.jpg"
+                                        alt="Santo Guerreiro - Roma Invicta"
+                                        loading="lazy"
+                                        class="latest-content__item-img latest-content__item-img--livro"
+                                    >
+                                
+                            </a>
+                            <div class="latest-content__item-body">
+                                <a class="latest-content__item-title" href="/resenhas/santo-guerreiro/">Santo Guerreiro - Roma Invicta</a>
+                                <span class="latest-content__item-meta">Eduardo Spohr</span>
+                            </div>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+
     </div>
 
 </section>
@@ -811,24 +883,20 @@
         <h2 class="section__heading">
             
                 
-                Vamos Criar
+                Social
                 
                 <br>
             
                 
                     <span class="text-accent">
                 
-                Algo Incrível
+                Media
                 
                     </span>
                 
                 
             
         </h2>
-        
-            <p class="section__description">
-                Estou sempre interessado em ouvir sobre novos projetos e oportunidades. Se tiver uma dúvida ou quiser apenas dizer oi, responderei em breve.
-            </p>
         
     </div>
 
@@ -840,7 +908,7 @@
         <span class="contact__label">Email</span>
         <span class="contact__divider" aria-hidden="true"></span>
         
-            <a class="contact__value" href="mailto:hello@example.com">hello@example.com</a>
+            <a class="contact__value" href="mailto:hey@manuworks.dev">hey@manuworks.dev</a>
         
     </li>
 
@@ -860,17 +928,7 @@
         <span class="contact__label">GitHub</span>
         <span class="contact__divider" aria-hidden="true"></span>
         
-            <span class="contact__value">@yourusername</span>
-        
-    </li>
-
-            
-                
-    <li class="contact__row">
-        <span class="contact__label">Twitter</span>
-        <span class="contact__divider" aria-hidden="true"></span>
-        
-            <span class="contact__value">@yourusername</span>
+            <a class="contact__value" href="https://github.com/ManudevWorks">@ManudevWorks</a>
         
     </li>
 
@@ -881,8 +939,8 @@
 
         
     <div class="contact__watermark" aria-hidden="true">
-        <span>Vamos</span>
-        <span>Conversar</span>
+        <span>$ echo</span>
+        <span>"Hi!"</span>
     </div>
 
     </div>
@@ -896,7 +954,7 @@
         <nav class="footer__nav">
             <ul class="list-unstyled">
                 <li><a href="/works">Works</a></li>
-                <li><a href="/leituras">Leituras</a></li>
+                <li><a href="/resenhas">Resenhas</a></li>
                 <li><a href="/blog">Blog</a></li>
             </ul>
         </nav>
@@ -908,44 +966,25 @@
 </footer>
 
         <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Emanuel F.",
-        "url": "https://manuworks.dev",
-        "jobTitle": "Desenvolvedor",
-        "sameAs": [
-            "",
-            "",
-            "",
-        ]
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Emanuel F.",
+    "url": "https://manuworks.dev",
+    "jobTitle": "Desenvolvedor"
+}
 </script>
 
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Manu Works | Emanuel F. | Desenvolvedor e criador",
-        "url": "https://manuworks.dev"
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Manu Works | Emanuel F. | Desenvolvedor e criador",
+    "url": "https://manuworks.dev"
+}
 </script>
 
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://manuworks.dev"
-            }
-        ]
-    }
-</script>
-
+        
         
     </body>
 </html>

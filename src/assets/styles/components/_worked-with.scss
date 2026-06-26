@@ -6,6 +6,15 @@
         flex: 1;
     }
 
+    &-img {
+        max-width: 60%;
+        max-height: 60px;
+        object-fit: contain;
+        filter: grayscale(1);
+        opacity: 0.6;
+        transition: all .3s ease;
+    }
+
     &-grid-item {
         background-color: var(--color-white);
         display: flex;
@@ -35,6 +44,11 @@
             border-color: var(--accent);
 
             &:before {
+                opacity: 1;
+            }
+
+            .section__brands-img {
+                filter: grayscale(0);
                 opacity: 1;
             }
         }

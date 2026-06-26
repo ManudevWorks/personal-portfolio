@@ -1,11 +1,30 @@
 {% macro render(project, index) %}
     <article class="work-card">
+        {% if project.link %}
+            <a class="work-card__link" href="{{ project.link }}" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto {{ project.title }}"></a>
+        {% endif %}
         <div class="work-card__media">
-            <span class="work-card__index">{{ index }}</span>
+            {% if project.image %}
+                <img
+                    class="work-card__img"
+                    src="/assets/media/{{ project.image }}"
+                    alt="{{ project.title }}"
+                    loading="lazy"
+                >
+                <div class="work-card__overlay" aria-hidden="true"></div>
+            {% else %}
+                <span class="work-card__index">{{ index }}</span>
+            {% endif %}
         </div>
         <div class="work-card__body">
             <div class="work-card__header">
-                <h3 class="work-card__title">{{ project.title }}</h3>
+                <h3 class="work-card__title">
+                    {% if project.link %}
+                        <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
+                    {% else %}
+                        {{ project.title }}
+                    {% endif %}
+                </h3>
                 {% if project.year %}
                     <span class="work-card__year">{{ project.year }}</span>
                 {% endif %}

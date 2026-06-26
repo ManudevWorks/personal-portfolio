@@ -27,6 +27,8 @@ const GEN_ITEMS   = path.join(ROOT, "src", "pages", "resenhas", "_generated", "i
 const GEN_TIPOS   = path.join(ROOT, "src", "pages", "resenhas", "_generated", "tipos");
 const DATA_JSON   = path.join(ROOT, "src", "data", "resenhas.json");
 
+const site = require("../src/data/global.json").site;
+
 // ── Type display labels ───────────────────────────────────────────────────────
 
 const TYPE_LABELS = {
@@ -119,6 +121,30 @@ function build() {
               `\n</ul>`
             : "";
 
+        // ── JSON-LD Review ────────────────────────────────────────────────────
+        const itemReviewed = type === "livro"
+            ? { "@type": "Book",        "name": title, "author": { "@type": "Person", "name": author } }
+            : { "@type": "MusicAlbum", "name": title, "byArtist": { "@type": "MusicGroup", "name": author } };
+
+        const schemaObj = {
+            "@context": "https://schema.org",
+            "@type": "Review",
+            "itemReviewed": itemReviewed,
+            "author": { "@type": "Person", "name": site.author },
+            "datePublished": dateIso,
+            "url": `${site.canonical_url}/resenhas/${slug}/`,
+            ...(excerpt ? { "reviewBody": excerpt } : {}),
+            ...(rating != null ? {
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": rating,
+                    "bestRating": 10
+                }
+            } : {}),
+            ...(cover ? { "image": `${site.canonical_url}/assets/media/resenhas/${cover}` } : {})
+        };
+        const schemaHtml = `<script type="application/ld+json">\n${JSON.stringify(schemaObj, null, 4)}\n</script>`;
+
         const itemNjk =
 `{# AUTO-GENERATED from src/content/resenhas/${file} — do not edit, re-run npm run resenhas #}
 {% extends "layouts/resenha.njk" %}
@@ -134,6 +160,7 @@ function build() {
 {% block resenha_body %}{% raw %}
 ${bodyHtml}
 {% endraw %}{% endblock %}
+{% block page_schema %}${schemaHtml}{% endblock %}
 `;
         fs.writeFileSync(path.join(GEN_ITEMS, `${slug}.njk`), itemNjk, "utf8");
 

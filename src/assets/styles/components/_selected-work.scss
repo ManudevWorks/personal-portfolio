@@ -1,12 +1,27 @@
+@use "@styles/abstracts" as *;
+
 .selected-work__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-lg);
     padding-left: var(--space-lg);
     padding-right: var(--space-lg);
+
+    @include respond-below('md') {
+        grid-template-columns: 1fr;
+    }
 }
 
 .work-card {
+    position: relative;
+
+    &__link {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
     &__media {
         position: relative;
         background-color: var(--muted);
@@ -18,6 +33,23 @@
         padding-bottom: var(--space-xl);
         overflow: hidden;
         margin-bottom: var(--space-lg);
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        inset: 0;
+        display: block;
+    }
+
+    &__overlay {
+        display: block;
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.1);
+        pointer-events: none;
     }
 
     &__index {
@@ -39,6 +71,10 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+
+        @include respond-below('lg') {
+            flex-direction: column-reverse;
+        }
     }
 
     &__title {

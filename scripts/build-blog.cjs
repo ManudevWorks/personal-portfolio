@@ -24,6 +24,8 @@ const GEN_POSTS   = path.join(ROOT, "src", "pages", "blog", "_generated", "posts
 const GEN_TAGS    = path.join(ROOT, "src", "pages", "blog", "_generated", "tags");
 const POSTS_JSON  = path.join(ROOT, "src", "data", "posts.json");
 
+const site = require("../src/data/global.json").site;
+
 // ── helpers ──────────────────────────────────────────────────────────────────
 
 function slugify(s) {
@@ -108,6 +110,28 @@ function build() {
               `\n</ul>`
             : "";
 
+        // ── JSON-LD BlogPosting ───────────────────────────────────────────────
+        const thumbnail = data.thumbnail || "";
+        const schemaObj = {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": title,
+            "datePublished": dateIso,
+            "description": excerpt,
+            "url": `${site.canonical_url}/blog/${slug}/`,
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": `${site.canonical_url}/blog/${slug}/`
+            },
+            "author": {
+                "@type": "Person",
+                "name": site.author
+            },
+            ...(thumbnail ? { "image": `${site.canonical_url}/assets/media/blog/${thumbnail}` } : {}),
+            ...(tags.length ? { "keywords": tags.join(", ") } : {})
+        };
+        const schemaHtml = `<script type="application/ld+json">\n${JSON.stringify(schemaObj, null, 4)}\n</script>`;
+
         // Write the generated post page
         const postNjk =
 `{# AUTO-GENERATED from src/content/blog/${file} — do not edit, re-run npm run blog #}
@@ -120,10 +144,11 @@ function build() {
 {% block post_body %}{% raw %}
 ${bodyHtml}
 {% endraw %}{% endblock %}
+{% block page_schema %}${schemaHtml}{% endblock %}
 `;
         fs.writeFileSync(path.join(GEN_POSTS, `${slug}.njk`), postNjk, "utf8");
 
-        posts.push({ slug, title, date: dateIso, dateDisplay, excerpt, tags });
+        posts.push({ slug, title, date: dateIso, dateDisplay, excerpt, tags, thumbnail });
     }
 
     // Sort newest-first

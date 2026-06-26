@@ -34,9 +34,17 @@ works-horizontal {
 /* ─── Individual panel ────────────────────────────────────────── */
 
 .works-panel {
+    position: relative;
     width: 100vw;
     height: 100vh;
     flex: 0 0 100vw;
+
+    &__link {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: z(raised);
+    }
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;

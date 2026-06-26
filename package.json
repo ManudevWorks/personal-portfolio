@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "blog": "node scripts/build-blog.cjs",
+    "new-post": "node scripts/new-post.cjs",
     "resenhas": "node scripts/build-resenhas.cjs",
+    "new-resenha": "node scripts/new-resenha.cjs",
     "content": "npm run blog && npm run resenhas",
     "prebuild": "npm run content",
     "build": "webpack --mode=development",

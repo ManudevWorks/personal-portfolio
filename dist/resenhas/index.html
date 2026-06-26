@@ -53,15 +53,16 @@
             <clock-component initial-type="0"></clock-component>
         </div>
         <nav class="header-navigation">
+            <input name="hamburger" id="hamburger" type="checkbox" />
             <div class="mobile-navigation">
-                <input name="hambuger" id="hamburger" type="checkbox" />
-                <label for="hamburger">
+                <label for="hamburger" aria-label="Abrir menu">
                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 17H20M4 12H20M4 7H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                 </label>
             </div>
-            <ul class="list-unstyled">
+            <label for="hamburger" class="nav-backdrop" aria-hidden="true"></label>
+            <ul class="header-navigation__list list-unstyled">
                 <li>
                     <a href="/works" title="">Works</a>
                 </li>
@@ -79,7 +80,6 @@
         <main id="main-content">
             
     
-
 
 
 <section id="resenhas" class="side-section">
@@ -113,145 +113,26 @@
     </div>
 
     
-    <nav class="resenha-filters" aria-label="Filtrar por tipo">
-        <a
-            href="/resenhas/"
-            class="resenha-filter is-active"
-            aria-current="page"
-        >Todos</a>
-        
-            <a
-                href="/resenhas/tipo/livro/"
-                class="resenha-filter"
-                
-            >Livros</a>
-        
-            <a
-                href="/resenhas/tipo/musica/"
-                class="resenha-filter"
-                
-            >Músicas</a>
-        
-    </nav>
-
-
-    <div class="resenha-list">
-        
+    <div class="resenha-section">
+        <div class="resenha-section__header">
+            <h3 class="resenha-section__title">Livros</h3>
             
-                
-    <article class="resenha-card resenha-card--musica" data-type="musica">
-        <a class="resenha-card__cover-link" href="/resenhas/in-rainbows/" tabindex="-1" aria-hidden="true">
-            
-                <img
-                    class="resenha-card__cover-img resenha-card__cover-img--musica"
-                    src="/assets/media/resenhas/in-rainbows.svg"
-                    alt="Capa de In Rainbows"
-                    loading="lazy"
-                >
-            
-        </a>
-        <div class="resenha-card__body">
-            <div class="resenha-card__meta-top">
-                <span class="resenha__type-pill resenha__type-pill--musica">
-                    Música
-                </span>
-                
-    
-        <span class="rating-badge">9.8/10</span>
-    
-
-            </div>
-            <h3 class="resenha-card__title">
-                <a href="/resenhas/in-rainbows/">In Rainbows</a>
-            </h3>
-            
-                <p class="resenha-card__author">Radiohead</p>
-            
-            
-                <p class="resenha-card__excerpt">Um disco que envelhece como vinho — cada escuta revela uma camada que antes passava despercebida.</p>
-            
-            
-                <time class="resenha-card__date" datetime="2026-06-18">18 de junho de 2026</time>
-            
-            
-                <ul class="resenha-card__tags list-unstyled">
-                    
-                        <li class="resenha-card__tag">rock</li>
-                    
-                        <li class="resenha-card__tag">alternativo</li>
-                    
-                        <li class="resenha-card__tag">art-rock</li>
-                    
-                </ul>
+                <a class="resenha-section__link" href="/resenhas/tipo/livro/">Ver todos</a>
             
         </div>
-    </article>
-
-            
-        
+        <div class="resenha-list">
             
                 
-    <article class="resenha-card resenha-card--musica" data-type="musica">
-        <a class="resenha-card__cover-link" href="/resenhas/kid-a/" tabindex="-1" aria-hidden="true">
-            
-                <img
-                    class="resenha-card__cover-img resenha-card__cover-img--musica"
-                    src="/assets/media/resenhas/kid-a.svg"
-                    alt="Capa de Kid A"
-                    loading="lazy"
-                >
-            
-        </a>
-        <div class="resenha-card__body">
-            <div class="resenha-card__meta-top">
-                <span class="resenha__type-pill resenha__type-pill--musica">
-                    Música
-                </span>
-                
-    
-        <span class="rating-badge">9.5/10</span>
-    
-
-            </div>
-            <h3 class="resenha-card__title">
-                <a href="/resenhas/kid-a/">Kid A</a>
-            </h3>
-            
-                <p class="resenha-card__author">Radiohead</p>
-            
-            
-                <p class="resenha-card__excerpt">A banda que reinventou o rock alternativo na década de 1990 decidiu, no ano 2000, deixar o rock para trás.</p>
-            
-            
-                <time class="resenha-card__date" datetime="2026-05-30">30 de maio de 2026</time>
-            
-            
-                <ul class="resenha-card__tags list-unstyled">
-                    
-                        <li class="resenha-card__tag">electronica</li>
-                    
-                        <li class="resenha-card__tag">rock</li>
-                    
-                        <li class="resenha-card__tag">art-rock</li>
-                    
-                        <li class="resenha-card__tag">experimental</li>
-                    
-                </ul>
-            
-        </div>
-    </article>
-
-            
-        
             
                 
+                    
     <article class="resenha-card resenha-card--livro" data-type="livro">
-        <a class="resenha-card__cover-link" href="/resenhas/crime-e-castigo/" tabindex="-1" aria-hidden="true">
+        <a class="resenha-card__cover-link" href="/resenhas/santo-guerreiro/" tabindex="-1" aria-hidden="true">
             
                 <img
                     class="resenha-card__cover-img resenha-card__cover-img--livro"
-                    src="/assets/media/resenhas/crime-e-castigo.svg"
-                    alt="Capa de Crime e Castigo"
+                    src="/assets/media/resenhas/santo-guerreiro.jpg"
+                    alt="Capa de Santo Guerreiro - Roma Invicta"
                     loading="lazy"
                 >
             
@@ -263,41 +144,111 @@
                 </span>
                 
     
-        <span class="rating-badge">10/10</span>
+        <span class="rating-badge">8/10</span>
     
 
             </div>
             <h3 class="resenha-card__title">
-                <a href="/resenhas/crime-e-castigo/">Crime e Castigo</a>
+                <a href="/resenhas/santo-guerreiro/">Santo Guerreiro - Roma Invicta</a>
             </h3>
             
-                <p class="resenha-card__author">Fiódor Dostoiévski</p>
+                <p class="resenha-card__author">Eduardo Spohr</p>
             
             
-                <p class="resenha-card__excerpt">Um estudante pobre mata uma usurária convicto de que possui o direito moral de fazê-lo. Dostoiévski passa as próximas quinhentas páginas desmontando essa convicção.</p>
+                <p class="resenha-card__excerpt">A história do santo mais icônico do Império Romano em forma de literatura histórica.</p>
             
             
-                <time class="resenha-card__date" datetime="2026-04-12">12 de abril de 2026</time>
+                <time class="resenha-card__date" datetime="2026-04-27">27 de abril de 2026</time>
             
             
                 <ul class="resenha-card__tags list-unstyled">
                     
                         <li class="resenha-card__tag">ficcao</li>
                     
-                        <li class="resenha-card__tag">classico</li>
+                        <li class="resenha-card__tag">romance historico</li>
                     
-                        <li class="resenha-card__tag">russo</li>
-                    
-                        <li class="resenha-card__tag">psicologico</li>
+                        <li class="resenha-card__tag">literatura brasileira</li>
                     
                 </ul>
             
         </div>
     </article>
 
+                
             
-        
+        </div>
     </div>
+    
+
+    
+    <div class="resenha-section">
+        <div class="resenha-section__header">
+            <h3 class="resenha-section__title">Músicas</h3>
+            
+                <a class="resenha-section__link" href="/resenhas/tipo/musica/">Ver todos</a>
+            
+        </div>
+        <div class="resenha-list">
+            
+                
+                    
+    <article class="resenha-card resenha-card--musica" data-type="musica">
+        <a class="resenha-card__cover-link" href="/resenhas/thrak/" tabindex="-1" aria-hidden="true">
+            
+                <img
+                    class="resenha-card__cover-img resenha-card__cover-img--musica"
+                    src="/assets/media/resenhas/king-crimson-thrak.jpeg"
+                    alt="Capa de Thrak"
+                    loading="lazy"
+                >
+            
+        </a>
+        <div class="resenha-card__body">
+            <div class="resenha-card__meta-top">
+                <span class="resenha__type-pill resenha__type-pill--musica">
+                    Música
+                </span>
+                
+    
+        <span class="rating-badge">9.2/10</span>
+    
+
+            </div>
+            <h3 class="resenha-card__title">
+                <a href="/resenhas/thrak/">Thrak</a>
+            </h3>
+            
+                <p class="resenha-card__author">King Crimson</p>
+            
+            
+                <p class="resenha-card__excerpt">Seis músicos, dois trios sobrepostos, uma única questão: o que acontece quando o caos é o método?</p>
+            
+            
+                <time class="resenha-card__date" datetime="2026-06-26">26 de junho de 2026</time>
+            
+            
+                <ul class="resenha-card__tags list-unstyled">
+                    
+                        <li class="resenha-card__tag">progressive-rock</li>
+                    
+                        <li class="resenha-card__tag">experimental</li>
+                    
+                        <li class="resenha-card__tag">jazz-rock</li>
+                    
+                        <li class="resenha-card__tag">art-rock</li>
+                    
+                </ul>
+            
+        </div>
+    </article>
+
+                
+            
+                
+            
+        </div>
+    </div>
+    
 </section>
 
 
@@ -308,7 +259,7 @@
         <nav class="footer__nav">
             <ul class="list-unstyled">
                 <li><a href="/works">Works</a></li>
-                <li><a href="/leituras">Leituras</a></li>
+                <li><a href="/resenhas">Resenhas</a></li>
                 <li><a href="/blog">Blog</a></li>
             </ul>
         </nav>
@@ -320,44 +271,25 @@
 </footer>
 
         <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Emanuel F.",
-        "url": "https://manuworks.dev",
-        "jobTitle": "Desenvolvedor",
-        "sameAs": [
-            "",
-            "",
-            "",
-        ]
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Emanuel F.",
+    "url": "https://manuworks.dev",
+    "jobTitle": "Desenvolvedor"
+}
 </script>
 
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Manu Works | Emanuel F. | Desenvolvedor e criador",
-        "url": "https://manuworks.dev"
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Manu Works | Emanuel F. | Desenvolvedor e criador",
+    "url": "https://manuworks.dev"
+}
 </script>
 
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://manuworks.dev"
-            }
-        ]
-    }
-</script>
-
+        
         
     </body>
 </html>

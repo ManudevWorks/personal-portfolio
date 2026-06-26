@@ -53,15 +53,16 @@
             <clock-component initial-type="0"></clock-component>
         </div>
         <nav class="header-navigation">
+            <input name="hamburger" id="hamburger" type="checkbox" />
             <div class="mobile-navigation">
-                <input name="hambuger" id="hamburger" type="checkbox" />
-                <label for="hamburger">
+                <label for="hamburger" aria-label="Abrir menu">
                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 17H20M4 12H20M4 7H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                 </label>
             </div>
-            <ul class="list-unstyled">
+            <label for="hamburger" class="nav-backdrop" aria-hidden="true"></label>
+            <ul class="header-navigation__list list-unstyled">
                 <li>
                     <a href="/works" title="">Works</a>
                 </li>
@@ -78,7 +79,6 @@
 
         <main id="main-content">
             
-
 
 
 
@@ -113,43 +113,24 @@
     </div>
 
     
-    <nav class="resenha-filters" aria-label="Filtrar por tipo">
-        <a
-            href="/resenhas/"
-            class="resenha-filter"
+    <div class="resenha-section">
+        <div class="resenha-section__header">
+            <h3 class="resenha-section__title">Livros</h3>
             
-        >Todos</a>
-        
-            <a
-                href="/resenhas/tipo/livro/"
-                class="resenha-filter is-active"
-                aria-current="page"
-            >Livros</a>
-        
-            <a
-                href="/resenhas/tipo/musica/"
-                class="resenha-filter"
-                
-            >Músicas</a>
-        
-    </nav>
-
-
-    <div class="resenha-list">
-        
-            
-        
-            
-        
+        </div>
+        <div class="resenha-list">
             
                 
+            
+                
+                    
     <article class="resenha-card resenha-card--livro" data-type="livro">
-        <a class="resenha-card__cover-link" href="/resenhas/crime-e-castigo/" tabindex="-1" aria-hidden="true">
+        <a class="resenha-card__cover-link" href="/resenhas/santo-guerreiro/" tabindex="-1" aria-hidden="true">
             
                 <img
                     class="resenha-card__cover-img resenha-card__cover-img--livro"
-                    src="/assets/media/resenhas/crime-e-castigo.svg"
-                    alt="Capa de Crime e Castigo"
+                    src="/assets/media/resenhas/santo-guerreiro.jpg"
+                    alt="Capa de Santo Guerreiro - Roma Invicta"
                     loading="lazy"
                 >
             
@@ -161,41 +142,43 @@
                 </span>
                 
     
-        <span class="rating-badge">10/10</span>
+        <span class="rating-badge">8/10</span>
     
 
             </div>
             <h3 class="resenha-card__title">
-                <a href="/resenhas/crime-e-castigo/">Crime e Castigo</a>
+                <a href="/resenhas/santo-guerreiro/">Santo Guerreiro - Roma Invicta</a>
             </h3>
             
-                <p class="resenha-card__author">Fiódor Dostoiévski</p>
+                <p class="resenha-card__author">Eduardo Spohr</p>
             
             
-                <p class="resenha-card__excerpt">Um estudante pobre mata uma usurária convicto de que possui o direito moral de fazê-lo. Dostoiévski passa as próximas quinhentas páginas desmontando essa convicção.</p>
+                <p class="resenha-card__excerpt">A história do santo mais icônico do Império Romano em forma de literatura histórica.</p>
             
             
-                <time class="resenha-card__date" datetime="2026-04-12">12 de abril de 2026</time>
+                <time class="resenha-card__date" datetime="2026-04-27">27 de abril de 2026</time>
             
             
                 <ul class="resenha-card__tags list-unstyled">
                     
                         <li class="resenha-card__tag">ficcao</li>
                     
-                        <li class="resenha-card__tag">classico</li>
+                        <li class="resenha-card__tag">romance historico</li>
                     
-                        <li class="resenha-card__tag">russo</li>
-                    
-                        <li class="resenha-card__tag">psicologico</li>
+                        <li class="resenha-card__tag">literatura brasileira</li>
                     
                 </ul>
             
         </div>
     </article>
 
+                
             
-        
+        </div>
     </div>
+    
+
+    
 </section>
 
 
@@ -206,7 +189,7 @@
         <nav class="footer__nav">
             <ul class="list-unstyled">
                 <li><a href="/works">Works</a></li>
-                <li><a href="/leituras">Leituras</a></li>
+                <li><a href="/resenhas">Resenhas</a></li>
                 <li><a href="/blog">Blog</a></li>
             </ul>
         </nav>
@@ -218,44 +201,25 @@
 </footer>
 
         <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Emanuel F.",
-        "url": "https://manuworks.dev",
-        "jobTitle": "Desenvolvedor",
-        "sameAs": [
-            "",
-            "",
-            "",
-        ]
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Emanuel F.",
+    "url": "https://manuworks.dev",
+    "jobTitle": "Desenvolvedor"
+}
 </script>
 
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Manu Works | Emanuel F. | Desenvolvedor e criador",
-        "url": "https://manuworks.dev"
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Manu Works | Emanuel F. | Desenvolvedor e criador",
+    "url": "https://manuworks.dev"
+}
 </script>
 
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://manuworks.dev"
-            }
-        ]
-    }
-</script>
-
+        
         
     </body>
 </html>

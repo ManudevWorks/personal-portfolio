@@ -79,110 +79,34 @@
 
         <main id="main-content">
             
-
-
-
-<section id="resenhas" class="side-section">
-    <div class="section__wrapper">
-        
-    <div class="section__title">
-        <h2 class="section__heading">
-            
-                
-                Resenhas &amp;
-                
-                <br>
-            
-                
-                    <span class="text-accent">
-                
-                Leituras
-                
-                    </span>
-                
-                
-            
-        </h2>
-        
-            <p class="section__description">
-                Discos e livros que merecem mais do que um like — merecem algumas palavras.
-            </p>
-        
-    </div>
-
-    </div>
-
-    
-
-    
-    <div class="resenha-section">
-        <div class="resenha-section__header">
-            <h3 class="resenha-section__title">Músicas</h3>
-            
+<article class="resenha" id="resenha">
+    <div class="section__wrapper resenha__header">
+        <div class="resenha__cover">
+            <img class="resenha__cover-img resenha__cover-img--livro" src="/assets/media/resenhas/santo-guerreiro.jpg" alt="Capa de Santo Guerreiro - Roma Invicta">
         </div>
-        <div class="resenha-list">
-            
-                
-                    
-    <article class="resenha-card resenha-card--musica" data-type="musica">
-        <a class="resenha-card__cover-link" href="/resenhas/thrak/" tabindex="-1" aria-hidden="true">
-            
-                <img
-                    class="resenha-card__cover-img resenha-card__cover-img--musica"
-                    src="/assets/media/resenhas/king-crimson-thrak.jpeg"
-                    alt="Capa de Thrak"
-                    loading="lazy"
-                >
-            
-        </a>
-        <div class="resenha-card__body">
-            <div class="resenha-card__meta-top">
-                <span class="resenha__type-pill resenha__type-pill--musica">
-                    Música
-                </span>
-                
-    
-        <span class="rating-badge">9.2/10</span>
-    
-
+        <div class="resenha__info">
+            <div class="resenha__meta-top">
+                <span class="resenha__type-pill resenha__type-pill--livro">Livro</span>
+                <span class="rating-badge">8/10</span>
             </div>
-            <h3 class="resenha-card__title">
-                <a href="/resenhas/thrak/">Thrak</a>
-            </h3>
-            
-                <p class="resenha-card__author">King Crimson</p>
-            
-            
-                <p class="resenha-card__excerpt">Seis músicos, dois trios sobrepostos, uma única questão: o que acontece quando o caos é o método?</p>
-            
-            
-                <time class="resenha-card__date" datetime="2026-06-26">26 de junho de 2026</time>
-            
-            
-                <ul class="resenha-card__tags list-unstyled">
-                    
-                        <li class="resenha-card__tag">progressive-rock</li>
-                    
-                        <li class="resenha-card__tag">experimental</li>
-                    
-                        <li class="resenha-card__tag">jazz-rock</li>
-                    
-                        <li class="resenha-card__tag">art-rock</li>
-                    
-                </ul>
-            
-        </div>
-    </article>
-
-                
-            
-                
-            
+            <h1 class="resenha__title">Santo Guerreiro - Roma Invicta</h1>
+            <p class="resenha__author">Eduardo Spohr</p>
+            <time class="resenha__date" datetime="2026-04-27">
+                27 de abril de 2026
+            </time>
+            <ul class="resenha__tags list-unstyled">
+    <li class="resenha__tag">ficcao</li>
+    <li class="resenha__tag">romance historico</li>
+    <li class="resenha__tag">literatura brasileira</li>
+</ul>
         </div>
     </div>
-    
-</section>
+    <div class="resenha__body">
+        
 
+
+    </div>
+</article>
 
         </main>
         <footer id="footer" class="container">
@@ -221,7 +145,33 @@
 }
 </script>
 
-        
+        <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+        "@type": "Book",
+        "name": "Santo Guerreiro - Roma Invicta",
+        "author": {
+            "@type": "Person",
+            "name": "Eduardo Spohr"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Emanuel F."
+    },
+    "datePublished": "2026-04-27",
+    "url": "https://manuworks.dev/resenhas/santo-guerreiro/",
+    "reviewBody": "A história do santo mais icônico do Império Romano em forma de literatura histórica.",
+    "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 8,
+        "bestRating": 10
+    },
+    "image": "https://manuworks.dev/assets/media/resenhas/santo-guerreiro.jpg"
+}
+</script>
         
     </body>
 </html>

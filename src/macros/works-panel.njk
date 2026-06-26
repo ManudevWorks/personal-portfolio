@@ -1,9 +1,12 @@
 {% macro render(project, index) %}
     <article class="works-panel">
+        {% if project.link %}
+            <a class="works-panel__link" href="{{ project.link }}" target="_blank" rel="noopener noreferrer" aria-label="Ver {{ project.title }}"></a>
+        {% endif %}
         <div class="works-panel__screenshot">
             <img
                 class="works-panel__img"
-                src="/assets/media/works/{{ project.image }}"
+                src="/assets/media/{{ project.image }}"
                 alt="Screenshot de {{ project.title }}"
                 loading="lazy"
                 width="1200"

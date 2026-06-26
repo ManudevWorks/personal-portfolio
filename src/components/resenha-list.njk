@@ -1,19 +1,44 @@
 {% import "macros/section-heading.njk" as section_heading %}
 {% import "macros/resenha-card.njk" as resenha_card %}
-{% import "macros/resenha-filter.njk" as resenha_filter %}
 
 <section id="resenhas" class="side-section">
     <div class="section__wrapper">
         {{ section_heading.render(resenhas.heading) }}
     </div>
 
-    {{ resenha_filter.render(resenhas_data.types, current_type) }}
-
-    <div class="resenha-list">
-        {% for item in resenhas_data.items %}
-            {% if current_type == "all" or current_type == item.type %}
-                {{ resenha_card.render(item) }}
+    {% if current_type == "all" or current_type == "livro" %}
+    <div class="resenha-section">
+        <div class="resenha-section__header">
+            <h3 class="resenha-section__title">Livros</h3>
+            {% if current_type == "all" %}
+                <a class="resenha-section__link" href="/resenhas/tipo/livro/">Ver todos</a>
             {% endif %}
-        {% endfor %}
+        </div>
+        <div class="resenha-list">
+            {% for item in resenhas_data.items %}
+                {% if item.type == "livro" %}
+                    {{ resenha_card.render(item) }}
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
+    {% endif %}
+
+    {% if current_type == "all" or current_type == "musica" %}
+    <div class="resenha-section">
+        <div class="resenha-section__header">
+            <h3 class="resenha-section__title">Músicas</h3>
+            {% if current_type == "all" %}
+                <a class="resenha-section__link" href="/resenhas/tipo/musica/">Ver todos</a>
+            {% endif %}
+        </div>
+        <div class="resenha-list">
+            {% for item in resenhas_data.items %}
+                {% if item.type == "musica" %}
+                    {{ resenha_card.render(item) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
 </section>

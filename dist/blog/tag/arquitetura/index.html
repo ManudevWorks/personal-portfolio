@@ -53,15 +53,16 @@
             <clock-component initial-type="0"></clock-component>
         </div>
         <nav class="header-navigation">
+            <input name="hamburger" id="hamburger" type="checkbox" />
             <div class="mobile-navigation">
-                <input name="hambuger" id="hamburger" type="checkbox" />
-                <label for="hamburger">
+                <label for="hamburger" aria-label="Abrir menu">
                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 17H20M4 12H20M4 7H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                 </label>
             </div>
-            <ul class="list-unstyled">
+            <label for="hamburger" class="nav-backdrop" aria-hidden="true"></label>
+            <ul class="header-navigation__list list-unstyled">
                 <li>
                     <a href="/works" title="">Works</a>
                 </li>
@@ -127,12 +128,6 @@
             >arquitetura</a>
         
             <a
-                href="/blog/tag/linguistica/"
-                class="blog-filter"
-                
-            >linguistica</a>
-        
-            <a
                 href="/blog/tag/reflexoes/"
                 class="blog-filter"
                 
@@ -154,6 +149,7 @@
             
                 
     <article class="blog-card" data-tags="web arquitetura">
+        
         <div class="blog-card__body">
             <div class="blog-card__header">
                 <h3 class="blog-card__title">
@@ -180,8 +176,6 @@
 
             
         
-            
-        
     </div>
 </section>
 
@@ -193,7 +187,7 @@
         <nav class="footer__nav">
             <ul class="list-unstyled">
                 <li><a href="/works">Works</a></li>
-                <li><a href="/leituras">Leituras</a></li>
+                <li><a href="/resenhas">Resenhas</a></li>
                 <li><a href="/blog">Blog</a></li>
             </ul>
         </nav>
@@ -205,44 +199,25 @@
 </footer>
 
         <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Emanuel F.",
-        "url": "https://manuworks.dev",
-        "jobTitle": "Desenvolvedor",
-        "sameAs": [
-            "",
-            "",
-            "",
-        ]
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Emanuel F.",
+    "url": "https://manuworks.dev",
+    "jobTitle": "Desenvolvedor"
+}
 </script>
 
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Manu Works | Emanuel F. | Desenvolvedor e criador",
-        "url": "https://manuworks.dev"
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Manu Works | Emanuel F. | Desenvolvedor e criador",
+    "url": "https://manuworks.dev"
+}
 </script>
 
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://manuworks.dev"
-            }
-        ]
-    }
-</script>
-
+        
         
     </body>
 </html>
