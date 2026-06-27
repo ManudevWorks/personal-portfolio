@@ -1,38 +1,19 @@
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "{{ site.author }}",
-        "url": "{{ site.canonical_url }}",
-        "jobTitle": "{{ site.job_title }}",
-        "sameAs": [
-            "{{ site.social.github }}",
-            "{{ site.social.linkedin }}",
-            "{{ site.social.skoob }}",
-        ]
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.author }}",
+    "url": "{{ site.canonical_url }}",
+    "jobTitle": "{{ site.job_title }}"{% if site.social.github or site.social.linkedin or site.social.skoob %},
+    "sameAs": [{% if site.social.github %}"{{ site.social.github }}"{% if site.social.linkedin or site.social.skoob %},{% endif %}{% endif %}{% if site.social.linkedin %}"{{ site.social.linkedin }}"{% if site.social.skoob %},{% endif %}{% endif %}{% if site.social.skoob %}"{{ site.social.skoob }}"{% endif %}]{% endif %}
+}
 </script>
 
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "{{ site.title }}",
-        "url": "{{ site.canonical_url }}"
-    }
-</script>
-
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "{{ site.canonical_url }}"
-            }
-        ]
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "url": "{{ site.canonical_url }}"
+}
 </script>

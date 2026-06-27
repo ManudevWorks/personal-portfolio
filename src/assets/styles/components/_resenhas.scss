@@ -1,0 +1,400 @@
+@use "@styles/abstracts" as *;
+
+#resenhas {
+    margin-top: calc(spacing(xxl)* 2);
+
+    .section__title,
+    .section__description {
+        margin-bottom: 0;
+    }
+}
+
+// ── Resenhas sections ─────────────────────────────────────────────────────────
+
+.resenha-section {
+    padding: 0 var(--space-lg) var(--space-xxl);
+    margin-top: spacing(xl);
+
+    & + & {
+        border-top: 1px solid var(--border);
+        padding-top: var(--space-xxl);
+    }
+
+    &__header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: var(--space-lg);
+    }
+
+    &__title {
+        font-family: var(--font-display);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-light);
+        color: var(--muted-foreground);
+        margin: 0;
+    }
+
+    &__link {
+        font-size: var(--font-size-sm);
+        color: var(--muted-foreground);
+        text-decoration: none;
+        transition: var(--transition-fast);
+
+        &:hover {
+            color: var(--foreground);
+        }
+    }
+}
+
+// ── Resenhas listing ──────────────────────────────────────────────────────────
+
+.resenha-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    padding: var(--space-lg);
+}
+
+.resenha-filter {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-xxs) var(--space-sm);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    font-size: var(--font-size-sm);
+    color: var(--muted-foreground);
+    text-decoration: none;
+    transition: var(--transition-fast);
+
+    &:hover {
+        color: var(--foreground);
+        border-color: var(--foreground);
+    }
+
+    &.is-active {
+        background-color: var(--foreground);
+        color: var(--background);
+        border-color: var(--foreground);
+    }
+}
+
+.resenha-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+
+    @include respond-below('lg') {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-below('sm') {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+// ── Resenha card ──────────────────────────────────────────────────────────────
+
+.resenha-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+
+    &__cover-link {
+        display: block;
+        text-decoration: none;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+    }
+
+    &__cover-img,
+    &__cover-placeholder {
+        display: block;
+        width: 100%;
+        border-radius: var(--radius-md);
+        background-color: var(--muted);
+        transition: var(--transition-fast);
+    }
+
+    // Square for music (1:1)
+    &__cover-img--musica,
+    &__cover-placeholder--musica {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    // Portrait for books (2:3)
+    &__cover-img--livro,
+    &__cover-placeholder--livro {
+        aspect-ratio: 2 / 3;
+        object-fit: cover;
+    }
+
+    &:hover &__cover-img,
+    &:hover &__cover-placeholder {
+        opacity: 0.85;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+
+    &__meta-top {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+    }
+
+    &__title {
+        font-family: var(--font-display);
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-light);
+        margin: 0;
+
+        a {
+            color: var(--foreground);
+            text-decoration: none;
+            transition: var(--transition-fast);
+
+            &:hover {
+                color: var(--accent);
+            }
+        }
+    }
+
+    &__author {
+        font-size: var(--font-size-sm);
+        color: var(--muted-foreground);
+        margin: 0;
+    }
+
+    &__excerpt {
+        font-size: var(--font-size-sm);
+        color: var(--muted-foreground);
+        line-height: var(--line-height-normal);
+        margin: 0;
+    }
+
+    &__date {
+        font-size: var(--font-size-xs);
+        color: var(--muted-foreground);
+        margin-top: spacing(sm);
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+        padding: 0;
+        margin: 0;
+    }
+
+    &__tag {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-pill);
+        padding: var(--space-xxs) var(--space-sm);
+        font-size: var(--font-size-xs);
+        color: var(--foreground);
+        line-height: 1.5;
+    }
+}
+
+// ── Type pill ─────────────────────────────────────────────────────────────────
+
+.resenha__type-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-xxs) var(--space-sm);
+    border-radius: var(--radius-pill);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+
+    &--musica {
+        background-color: var(--accent);
+        color: var(--accent-foreground);
+    }
+
+    &--livro {
+        background-color: var(--secondary);
+        color: var(--secondary-foreground);
+    }
+}
+
+// ── Rating badge ──────────────────────────────────────────────────────────────
+
+.rating-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-xxs) var(--space-sm);
+    background-color: var(--foreground);
+    color: var(--background);
+    border-radius: var(--radius-pill);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-display);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+// ── Review detail page ────────────────────────────────────────────────────────
+
+.resenha {
+    &__header {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: var(--space-xxl);
+        align-items: start;
+        margin-bottom: var(--space-xxl);
+        margin-top: calc(spacing(xxl) * 2);
+
+        @include respond-below('lg') {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__cover {
+        width: 280px;
+        flex-shrink: 0;
+
+        @include respond-below('lg') {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__cover-img {
+        display: block;
+        width: 100%;
+        border-radius: var(--radius-md);
+        box-shadow: 0 8px 32px rgba(26, 26, 26, 0.15);
+
+        &--musica { aspect-ratio: 1 / 1; }
+        &--livro  { aspect-ratio: 2 / 3; }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+        padding-top: var(--space-md);
+    }
+
+    &__meta-top {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+    }
+
+    &__title {
+        font-family: var(--font-display);
+        font-size: var(--font-size-xxl);
+        font-weight: var(--font-weight-light);
+        line-height: var(--line-height-tight);
+        margin: 0;
+        color: var(--foreground);
+    }
+
+    &__author {
+        font-family: var(--font-display);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-light);
+        color: var(--muted-foreground);
+        margin: 0;
+    }
+
+    &__date {
+        font-size: var(--font-size-sm);
+        color: var(--muted-foreground);
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__tag {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-pill);
+        padding: var(--space-xxs) var(--space-sm);
+        font-size: var(--font-size-xs);
+        color: var(--foreground);
+        line-height: 1.5;
+    }
+
+    &__body {
+        max-width: 72ch;
+        margin: 0 auto;
+        padding: 0 var(--space-lg) var(--space-xxl);
+
+        p, ul, ol, blockquote {
+            font-size: var(--font-size-md);
+            line-height: var(--line-height-loose);
+            color: var(--foreground);
+            margin-bottom: var(--space-lg);
+
+            @include respond-below('lg') {
+                font-size: 16px;
+            }
+        }
+
+        h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: var(--font-weight-light);
+            color: var(--foreground);
+            margin-top: var(--space-xxl);
+            margin-bottom: var(--space-md);
+
+            @include respond-below('lg') {
+                font-size: font-size(xl);
+                margin-top: spacing(lg);
+            }
+        }
+
+        h2 { 
+            font-size: var(--font-size-xxl); 
+            
+            @include respond-below('lg') {
+                font-size: font-size(xl);
+            }
+        }
+        h3 { font-size: var(--font-size-xl); }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        code {
+            font-family: monospace;
+            font-size: 0.9em;
+            background: var(--secondary);
+            padding: 0.1em 0.35em;
+            border-radius: var(--radius-sm);
+        }
+
+        blockquote {
+            border-left: 3px solid var(--accent);
+            padding-left: var(--space-lg);
+            color: var(--muted-foreground);
+            font-style: italic;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: var(--space-xxl) 0;
+        }
+
+        em {
+            font-style: italic;
+        }
+    }
+}

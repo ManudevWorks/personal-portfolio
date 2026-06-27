@@ -1,0 +1,49 @@
+{% extends "templates/side-to-side.njk" %}
+{% import "macros/section-heading.njk" as section_heading %}
+{% import "macros/project-card.njk" as project_card %}
+
+{% block id %}personal-projects{% endblock %}
+
+{% block left %}
+<div class="section__content-left">
+    {{ section_heading.render(personal_projects.heading_left) }}
+
+    {% set steps = ["Iniciante", "Intermediário", "Avançado", "Fluente", "Nativo"] %}
+    <div class="section__languages">
+        {% for language in personal_projects.languages %}
+            {% set language_level = language.fluency_step %}
+            <div class="section__language-item">
+                <span class="section__language-name">
+                    <span>
+                        {{ language.name }}
+                    </span>
+
+                    <span>
+                        {{ steps[language_level - 1] }}
+                    </span>
+                </span>
+
+                <span class="section__language-fluency">
+                    {% for i in range(0, 5) %}
+                    <div class="section__language-fluency-step{% if loop.index <= language_level %} active{% endif %}">
+
+                    </div>
+                    {% endfor %}
+                </span>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block right %}
+    <div class="section__content-right">
+        {{ section_heading.render(personal_projects.heading_right) }}
+
+        <div class="section__projects">
+            {% for project in personal_projects.projects %}
+                {{ project_card.render(project) }}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

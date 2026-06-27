@@ -1,0 +1,16 @@
+{% macro render(types, current_type) %}
+    <nav class="resenha-filters" aria-label="Filtrar por tipo">
+        <a
+            href="/resenhas/"
+            class="resenha-filter{% if current_type == 'all' %} is-active{% endif %}"
+            {% if current_type == 'all' %}aria-current="page"{% endif %}
+        >Todos</a>
+        {% for type in types %}
+            <a
+                href="/resenhas/tipo/{{ type }}/"
+                class="resenha-filter{% if type == current_type %} is-active{% endif %}"
+                {% if type == current_type %}aria-current="page"{% endif %}
+            >{% if type == "musica" %}Músicas{% elif type == "livro" %}Livros{% else %}{{ type }}{% endif %}</a>
+        {% endfor %}
+    </nav>
+{% endmacro %}

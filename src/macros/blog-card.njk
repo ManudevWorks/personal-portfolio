@@ -1,0 +1,34 @@
+{% macro render(post) %}
+    <article class="blog-card" data-tags="{{ post.tags | join(' ') }}">
+        {% if post.thumbnail %}
+            <div class="blog-card__thumbnail">
+                <img
+                    class="blog-card__thumbnail-img"
+                    src="/assets/media/blog/{{ post.thumbnail }}"
+                    alt="{{ post.title }}"
+                    loading="lazy"
+                >
+            </div>
+        {% endif %}
+        <div class="blog-card__body">
+            <div class="blog-card__header">
+                <h3 class="blog-card__title">
+                    <a href="/blog/{{ post.slug }}/">{{ post.title }}</a>
+                </h3>
+                {% if post.dateDisplay %}
+                    <time class="blog-card__date" datetime="{{ post.date }}">{{ post.dateDisplay }}</time>
+                {% endif %}
+            </div>
+            {% if post.excerpt %}
+                <p class="blog-card__excerpt">{{ post.excerpt }}</p>
+            {% endif %}
+            {% if post.tags %}
+                <ul class="blog-card__tags list-unstyled">
+                    {% for tag in post.tags %}
+                        <li class="blog-card__tag">{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </article>
+{% endmacro %}

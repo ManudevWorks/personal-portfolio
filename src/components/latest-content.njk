@@ -1,0 +1,80 @@
+{% extends "templates/side-to-side.njk" %}
+{% import "macros/section-heading.njk" as section_heading %}
+
+{% block id %}latest-content{% endblock %}
+
+{% block left %}
+    {{ section_heading.render(latest_content.heading) }}
+{% endblock %}
+
+{% block right %}{% endblock %}
+
+{% block bottom %}
+    <div class="latest-content__grid">
+
+        <div class="latest-content__col">
+            <div class="latest-content__col-header">
+                <span class="latest-content__col-title">Blog</span>
+                <a class="latest-content__col-link" href="/blog/">Ver todos</a>
+            </div>
+            <ul class="latest-content__list list-unstyled">
+                {% for post in posts.posts %}
+                    {% if loop.index <= 3 %}
+                        <li class="latest-content__item">
+                            <a class="latest-content__item-thumb" href="/blog/{{ post.slug }}/" tabindex="-1" aria-hidden="true">
+                                {% if post.thumbnail %}
+                                    <img
+                                        src="/assets/media/blog/{{ post.thumbnail }}"
+                                        alt="{{ post.title }}"
+                                        loading="lazy"
+                                        class="latest-content__item-img latest-content__item-img--wide"
+                                    >
+                                {% else %}
+                                    <div class="latest-content__item-placeholder latest-content__item-placeholder--wide"></div>
+                                {% endif %}
+                            </a>
+                            <div class="latest-content__item-body">
+                                <a class="latest-content__item-title" href="/blog/{{ post.slug }}/">{{ post.title }}</a>
+                                {% if post.dateDisplay %}
+                                    <time class="latest-content__item-meta" datetime="{{ post.date }}">{{ post.dateDisplay }}</time>
+                                {% endif %}
+                            </div>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="latest-content__col">
+            <div class="latest-content__col-header">
+                <span class="latest-content__col-title">Resenhas</span>
+                <a class="latest-content__col-link" href="/resenhas/">Ver todos</a>
+            </div>
+            <ul class="latest-content__list list-unstyled">
+                {% for item in resenhas_data.items %}
+                    {% if loop.index <= 3 %}
+                        <li class="latest-content__item">
+                            <a class="latest-content__item-thumb" href="/resenhas/{{ item.slug }}/" tabindex="-1" aria-hidden="true">
+                                {% if item.cover %}
+                                    <img
+                                        src="/assets/media/resenhas/{{ item.cover }}"
+                                        alt="{{ item.title }}"
+                                        loading="lazy"
+                                        class="latest-content__item-img latest-content__item-img--{{ item.type }}"
+                                    >
+                                {% else %}
+                                    <div class="latest-content__item-placeholder latest-content__item-placeholder--{{ item.type }}"></div>
+                                {% endif %}
+                            </a>
+                            <div class="latest-content__item-body">
+                                <a class="latest-content__item-title" href="/resenhas/{{ item.slug }}/">{{ item.title }}</a>
+                                <span class="latest-content__item-meta">{{ item.author }}</span>
+                            </div>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "templates/side-to-side.njk" %}
+{% import "macros/section-heading.njk" as section_heading %}
+
+{% block id %}brands{% endblock %}
+
+{% block left %}
+    {{ section_heading.render(worked_with.heading) }}
+{% endblock %}
+
+{% block right %}
+    <div class="section__brands-grid">
+        {% for brand in worked_with.brands %}
+            <div class="section__brands-grid-item">
+                {% if brand.image %}
+                    <img
+                        class="section__brands-img"
+                        src="/assets/media/brands/{{ brand.image }}"
+                        alt="{{ brand.name }}"
+                        loading="lazy"
+                    >
+                {% elif brand.name %}
+                    <span class="text">{{ brand.name }}</span>
+                {% else %}
+                    <span class="text">{{ brand }}</span>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

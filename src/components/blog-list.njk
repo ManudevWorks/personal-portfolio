@@ -1,0 +1,19 @@
+{% import "macros/section-heading.njk" as section_heading %}
+{% import "macros/blog-card.njk" as blog_card %}
+{% import "macros/blog-filter.njk" as blog_filter %}
+
+<section id="blog" class="side-section">
+    <div class="section__wrapper">
+        {{ section_heading.render(blog.heading) }}
+    </div>
+
+    {{ blog_filter.render(posts.allTags, current_tag) }}
+
+    <div class="blog-list">
+        {% for post in posts.posts %}
+            {% if current_tag == "all" or current_tag in post.tags %}
+                {{ blog_card.render(post) }}
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

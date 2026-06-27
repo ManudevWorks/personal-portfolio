@@ -1,3 +1,5 @@
+@use "@styles/abstracts" as *;
+
 * {
   box-sizing: border-box;
 }
@@ -139,18 +141,32 @@ path {
   }
 }
 
+#main-content section {
+  margin-bottom: spacing(xxl);  
+}
+
 .section {
   &__wrapper {
     max-width: var(--container-width);
     display: flex;
     padding-left: var(--space-lg);
     padding-right: var(--space-lg);
+    gap: var(--space-xxl);
+
+    @include respond-below(lg) {
+      display: block;
+    }
   }
 
   &__title,
   &__description {
-    flex: 0 0 50%;
-    width: 50%;
+    flex: 1;
+    max-width: 100%;
+    margin-bottom: spacing(lg);
+
+    @include respond-below(lg) {
+      max-width: 100%;
+    }
   }
 
   &__heading {
@@ -162,6 +178,16 @@ path {
     padding-bottom: var(--space-xl);
     border-bottom: 1px solid var(--accent);
     margin-bottom: var(--space-xl);
+
+    @include respond-below('lg') {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__title {
+    @include respond-below('lg') {
+      margin-bottom: spacing(lg);
+    }
   }
 
   &__paragraph {

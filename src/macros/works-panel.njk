@@ -1,0 +1,39 @@
+{% macro render(project, index) %}
+    <article class="works-panel">
+        {% if project.link %}
+            <a class="works-panel__link" href="{{ project.link }}" target="_blank" rel="noopener noreferrer" aria-label="Ver {{ project.title }}"></a>
+        {% endif %}
+        <div class="works-panel__screenshot">
+            <img
+                class="works-panel__img"
+                src="/assets/media/{{ project.image }}"
+                alt="Screenshot de {{ project.title }}"
+                loading="lazy"
+                width="1200"
+                height="800"
+            >
+        </div>
+        <div class="works-panel__body">
+            <span class="works-panel__index works-panel__reveal">{% if index < 10 %}0{{ index }}{% else %}{{ index }}{% endif %}</span>
+            <div class="works-panel__meta works-panel__reveal">
+                {% if project.category %}
+                    <span class="works-panel__category">{{ project.category }}</span>
+                {% endif %}
+                {% if project.year %}
+                    <span class="works-panel__year">{{ project.year }}</span>
+                {% endif %}
+            </div>
+            <h2 class="works-panel__title works-panel__reveal">{{ project.title }}</h2>
+            {% if project.description %}
+                <p class="works-panel__description works-panel__reveal">{{ project.description }}</p>
+            {% endif %}
+            {% if project.tags %}
+                <ul class="works-panel__tags list-unstyled works-panel__reveal">
+                    {% for tag in project.tags %}
+                        <li class="works-panel__tag">{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </article>
+{% endmacro %}

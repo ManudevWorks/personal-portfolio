@@ -1,0 +1,11 @@
+{% macro render(row) %}
+    <li class="contact__row">
+        <span class="contact__label">{{ row.label }}</span>
+        <span class="contact__divider" aria-hidden="true"></span>
+        {% if row.href %}
+            <a class="contact__value" href="{{ row.href }}">{{ row.value }}</a>
+        {% else %}
+            <span class="contact__value">{{ row.value }}</span>
+        {% endif %}
+    </li>
+{% endmacro %}

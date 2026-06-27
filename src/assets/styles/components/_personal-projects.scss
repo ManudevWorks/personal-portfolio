@@ -1,0 +1,112 @@
+@use "@styles/abstracts" as *;
+
+.section {
+    &__content-left,
+    &__content-right {
+        width: 100%;
+
+        & > * {
+            width: 100% !important;
+        }
+    }
+
+    &__content-left {
+        @include respond-below('lg') {
+            margin-bottom: spacing(xxl);
+        }
+    }
+
+    &__language-item {
+        margin-bottom: spacing(xl);
+    }
+
+    &__language-name {
+        color: var(--muted-foreground);
+        display: block;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__language-fluency {
+        display: flex;
+        width: 100%;
+        gap: 4px;
+
+        &-step {
+            flex: 1;
+            min-height: 3px;
+            background-color: var(--color-gray-300);
+
+            &.active {
+                background-color: var(--accent);
+                border-radius: 12px;
+            }
+        }
+    }
+
+    &__projects {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+        margin-top: var(--space-xl);
+    }
+
+    &__project {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-md);
+    }
+
+    &__project-body {
+        flex: 1;
+    }
+
+    &__project-title {
+        font-family: var(--font-display);
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-light);
+        color: var(--foreground);
+        margin-bottom: var(--space-xs);
+        margin-top: 0;
+
+        @include respond-below('lg') {
+            font-size: font-size(lg);
+        }
+    }
+
+    &__project-description {
+        color: var(--muted-foreground);
+        font-size: var(--font-size-sm);
+        line-height: 1.6;
+        margin-bottom: var(--space-sm);
+    }
+
+    &__project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+        padding: 0;
+        margin: 0;
+    }
+
+    &__project-tag {
+        background-color: var(--muted);
+        color: var(--card-foreground);
+        border-radius: var(--radius-pill);
+        padding: var(--space-xxs) var(--space-sm);
+        font-size: var(--font-size-xs);
+        line-height: 1.5;
+    }
+
+    &__project-circle {
+        display: block;
+        flex-shrink: 0;
+        width: 56px;
+        height: 56px;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+    }
+}

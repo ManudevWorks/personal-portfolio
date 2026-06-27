@@ -22,7 +22,7 @@
     },
     "about_section": {
         "heading": {
-            "title": {    
+            "title": {
                 "line_1": "Sobre",
                 "line_2": "mim"
             },
@@ -35,5 +35,180 @@
             "paragraph_4": "Sou uma pessoa curiosa por natureza, instigada pelos \"por quês\". Além do desenvolvimento, me interesso por áreas como linguística, arte, história, música, religião e humanidades. Gosto de entender como as coisas funcionam — sejam sistemas, línguas, culturas ou ideias.",
             "paragraph_5": "Vivendo pela primeira vez, não desdenho nenhuma experiência como inoportuna. Toda vivência pode ser útil quando dela se tira uma lição. Gosto de conhecer coisas novas e vencer novos desafios — bonum est diffusivum sui."
         }
+    },
+    "worked_with": {
+        "heading": {
+            "title": {
+                "line_1": "Projetos com",
+                "line_2": "minha participação"
+            },
+            "description": ""
+        },
+        "brands": [
+            { "name": "Stanley" },
+            { "name": "Gummy" },
+            { "name": "Bold Snacks" },
+            { "name": "Prohall" },
+            { "name": "Woly" },
+            { "name": "La Ganexa" }
+        ]
+    },
+    "contact": {
+        "heading": {
+            "title": {
+                "line_1": "Social",
+                "line_2": "Media"
+            },
+            "description": ""
+        },
+        "links": [
+            { "label": "Email", "value": "hey@manuworks.dev", "href": "mailto:hey@manuworks.dev" },
+            { "label": "LinkedIn", "value": "/in/yourprofile", "href": "" },
+            { "label": "GitHub", "value": "@ManudevWorks", "href": "https://github.com/ManudevWorks" }
+        ]
+    },
+    "selected_work": {
+        "heading": {
+            "title": {
+                "line_1": "Trabalhos",
+                "line_2": "Selecionados"
+            },
+            "description": "Uma coleção de projetos que demonstram minha abordagem em design e desenvolvimento."
+        },
+        "projects": [
+            {
+                "title": "Greek Mathesis",
+                "year": "2022",
+                "category": "Aplicação Web",
+                "description": "Plataforma de ensino de Grego Antigo de forma gamificada.",
+                "tags": ["Svelte", "Node.js", "Gamificação"],
+                "image": "images/greek-mathesis.png",
+                "link": "https://greek-mathesis.vercel.app/"
+            },
+            {
+                "title": "Mythos",
+                "year": "2026",
+                "category": "Dev Setup",
+                "description": "Uma estrutura limpa para criar sites rápidos e bem-acabados, com templates organizados, estilos em Sass, scripts modulares e recursos otimizados.",
+                "tags": ["Nunjucks", "Webpack", "SCSS"],
+                "image": "images/mythos.png",
+                "link": "https://github.com/ManudevWorks/mythos"
+            }
+        ]
+    },
+    "latest_content": {
+        "heading": {
+            "title": {
+                "line_1": "Últimas",
+                "line_2": "Publicações"
+            },
+            "description": ""
+        }
+    },
+    "blog": {
+        "heading": {
+            "title": {
+                "line_1": "Blog &",
+                "line_2": "Escritos"
+            },
+            "description": "Textos sobre desenvolvimento web, linguagem e as coisas que me fazem pensar."
+        }
+    },
+    "resenhas": {
+        "heading": {
+            "title": {
+                "line_1": "Resenhas &",
+                "line_2": "Leituras"
+            },
+            "description": "Discos e livros que merecem mais do que um like — merecem algumas palavras."
+        }
+    },
+    "works": {
+        "heading": {
+            "title": {
+                "line_1": "Portfólio de",
+                "line_2": "Trabalhos"
+            },
+            "description": "Uma seleção de projetos que demonstram minha abordagem ao design e desenvolvimento."
+        },
+        "projects": [
+            {
+                "title": "Greek Mathesis",
+                "year": "2022",
+                "category": "Aplicação Web",
+                "description": "Plataforma de ensino de Grego Antigo de forma gamificada.",
+                "tags": ["Svelte", "Node.js", "Gamificação"],
+                "image": "images/greek-mathesis.png",
+                "link": "https://greek-mathesis.vercel.app/"
+            },
+            {
+                "title": "Mythos",
+                "year": "2026",
+                "category": "Dev Setup",
+                "description": "Uma estrutura limpa para criar sites rápidos e bem-acabados, com templates organizados, estilos em Sass, scripts modulares e recursos otimizados.",
+                "tags": ["Nunjucks", "Webpack", "SCSS"],
+                "image": "images/mythos.png",
+                "link": "https://github.com/ManudevWorks/mythos"
+            }
+        ]
+    },
+    "personal_projects": {
+        "heading_left": {
+            "title": {
+                "line_1": "Linguagem &",
+                "line_2": "Comunicação"
+            },
+            "description": "\"A fala tem um lado individual e um lado social, e não podemos conceber um sem o outro.\" - Ferdinand de Saussure"
+        },
+        "heading_right": {
+            "title": {
+                "line_1": "Projetos Pessoais &",
+                "line_2": "Hobbies"
+            },
+            "description": ""
+        },
+        "projects": [
+            {
+                "title": "Contribuições Open Source",
+                "description": "Contribuindo para comunidade em projetos Open Source para aprender e retribuir.",
+                "tags": ["Open Source", "FOSS"]
+            },
+            {
+                "title": "Projetos de Linguística",
+                "description": "Pesquisa e escrita sobre linguística aplicada, etimologia e a estrutura das línguas modernas e antigas.",
+                "tags": ["Linguística", "Escrita", "Estudos"]
+            },
+            {
+                "title": "Experimentos Criativos",
+                "description": "Explorando a interseção entre arte, tecnologia e design — do generativo ao artesanal.",
+                "tags": ["Design", "Criatividade", "Arte", "UX"]
+            }
+        ],
+        "languages": [
+            {
+                "name": "Português",
+                "fluency_step": 5
+            },
+            {
+                "name": "Inglês",
+                "fluency_step": 4
+            },
+            {
+                "name": "Francês",
+                "fluency_step": 2
+            },
+            {
+                "name": "Alemão",
+                "fluency_step": 2
+            },
+            {
+                "name": "Latim",
+                "fluency_step": 3
+            },
+            {
+                "name": "Grego Antigo",
+                "fluency_step": 3
+            }
+        ]
     }
 }

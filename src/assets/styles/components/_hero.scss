@@ -1,3 +1,5 @@
+@use "@styles/abstracts" as *;
+
 #hero-section {
     overflow: hidden;
 
@@ -26,6 +28,10 @@
         max-width: clamp(600px, 5vw, 50%);
         line-height: var(--line-height-normal);
         font-size: var(--font-size-md);
+
+        @include respond-below('lg') {
+            font-size: 1rem;
+        }
     }
 
     .eyebrow {

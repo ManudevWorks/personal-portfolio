@@ -1,0 +1,16 @@
+{% macro render(project) %}
+    <article class="section__project">
+        <div class="section__project-body">
+            <h3 class="section__project-title">{{ project.title }}</h3>
+            <p class="section__project-description">{{ project.description }}</p>
+            {% if project.tags %}
+            <ul class="section__project-tags list-unstyled">
+                {% for tag in project.tags %}
+                    <li class="section__project-tag">{{ tag }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        <span class="section__project-circle" aria-hidden="true"></span>
+    </article>
+{% endmacro %}

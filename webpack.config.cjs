@@ -4,12 +4,42 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const RemoveEmptyScriptsPlugin = require("webpack-remove-empty-scripts");
 const CopyPlugin = require("copy-webpack-plugin");
-const siteData = require("./src/data/global.json");
+const siteData = {
+    ...require("./src/data/global.json"),
+    posts:        require("./src/data/posts.json"),
+    resenhas_data: require("./src/data/resenhas.json"),
+};
 
-const getSitePages = () => [
-    { name: 'index', chunk: 'index' },
-    { name: 'works', chunk: 'works/index' },
-];
+const getSitePages = () => {
+    const staticPages = [
+        { template: "src/pages/index.njk",     filename: "index.html" },
+        { template: "src/pages/works.njk",      filename: "works/index.html" },
+        { template: "src/pages/blog/index.njk",      filename: "blog/index.html" },
+        { template: "src/pages/resenhas/index.njk",  filename: "resenhas/index.html" },
+    ];
+
+    const postPages = glob.sync("src/pages/blog/_generated/posts/*.njk").map((file) => {
+        const slug = path.basename(file, ".njk");
+        return { template: file, filename: `blog/${slug}/index.html` };
+    });
+
+    const tagPages = glob.sync("src/pages/blog/_generated/tags/*.njk").map((file) => {
+        const tag = path.basename(file, ".njk");
+        return { template: file, filename: `blog/tag/${tag}/index.html` };
+    });
+
+    const resenhaPages = glob.sync("src/pages/resenhas/_generated/items/*.njk").map((file) => {
+        const slug = path.basename(file, ".njk");
+        return { template: file, filename: `resenhas/${slug}/index.html` };
+    });
+
+    const tipoPages = glob.sync("src/pages/resenhas/_generated/tipos/*.njk").map((file) => {
+        const tipo = path.basename(file, ".njk");
+        return { template: file, filename: `resenhas/tipo/${tipo}/index.html` };
+    });
+
+    return [...staticPages, ...postPages, ...tagPages, ...resenhaPages, ...tipoPages];
+};
 
 const getScripts = () => {
   const files = [
@@ -85,8 +115,9 @@ const getConfig = (env, argv) => {
                 ]
             }),
             ...getSitePages().map(page => new HtmlWebpackPlugin({
-                template: `./src/pages/${page.name}.njk`,
-                filename: `${page.chunk}.html`
+                template: `./${page.template}`,
+                filename:  page.filename,
+                inject:    false,
             })),
             new MiniCssExtractPlugin({
                 filename: "assets/styles/[name].min.css"

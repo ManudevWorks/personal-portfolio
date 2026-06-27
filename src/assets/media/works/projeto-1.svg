@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A1A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E2E2E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g1)" />
+  <rect x="80" y="80" width="320" height="4" fill="#C65D3B" opacity="0.8" />
+  <text x="80" y="200" font-family="serif" font-size="96" font-weight="300" fill="#FAF8F5" opacity="0.15">01</text>
+  <text x="80" y="480" font-family="serif" font-size="52" font-weight="300" fill="#FAF8F5">Projeto 1</text>
+  <text x="80" y="540" font-family="sans-serif" font-size="18" font-weight="400" fill="#6B6B6B">Aplicação Web · 2025</text>
+  <rect x="0" y="0" width="1200" height="800" fill="none" stroke="#C65D3B" stroke-width="2" opacity="0.1" />
+</svg>

@@ -1,0 +1,51 @@
+@use "sass:list";
+
+/// Accessor functions that return CSS custom properties from _tokens.scss.
+/// All functions validate the key at compile time — a typo is a build error.
+/// Because they return var(--…), they cannot be used in Sass arithmetic;
+/// use calc(var(--space-md) * 2) for math instead.
+
+$_space-keys:  xxs xs sm md lg xl xxl;
+$_radius-keys: sm md lg pill;
+$_font-keys:   xs sm md lg xl xxl;
+$_z-keys:      below base raised sticky header overlay modal toast;
+
+/// Return the CSS var for a spacing token.
+/// @param {string} $key - one of xxs | xs | sm | md | lg | xl | xxl
+/// @return {string} var(--space-#{$key})
+@function spacing($key) {
+  @if not list.index($_space-keys, $key) {
+    @error "Unknown spacing key `#{$key}`. Available: #{$_space-keys}.";
+  }
+  @return var(--space-#{$key});
+}
+
+/// Return the CSS var for a border-radius token.
+/// @param {string} $key - one of sm | md | lg | pill
+/// @return {string} var(--radius-#{$key})
+@function radius($key) {
+  @if not list.index($_radius-keys, $key) {
+    @error "Unknown radius key `#{$key}`. Available: #{$_radius-keys}.";
+  }
+  @return var(--radius-#{$key});
+}
+
+/// Return the CSS var for a font-size token.
+/// @param {string} $key - one of xs | sm | md | lg | xl | xxl
+/// @return {string} var(--font-size-#{$key})
+@function font-size($key) {
+  @if not list.index($_font-keys, $key) {
+    @error "Unknown font-size key `#{$key}`. Available: #{$_font-keys}.";
+  }
+  @return var(--font-size-#{$key});
+}
+
+/// Return the CSS var for a z-index token.
+/// @param {string} $key - one of below | base | raised | sticky | header | overlay | modal | toast
+/// @return {string} var(--z-#{$key})
+@function z($key) {
+  @if not list.index($_z-keys, $key) {
+    @error "Unknown z-index key `#{$key}`. Available: #{$_z-keys}.";
+  }
+  @return var(--z-#{$key});
+}
