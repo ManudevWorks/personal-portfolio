@@ -339,6 +339,10 @@
             line-height: var(--line-height-loose);
             color: var(--foreground);
             margin-bottom: var(--space-lg);
+
+            @include respond-below('lg') {
+                font-size: 16px;
+            }
         }
 
         h2, h3, h4 {
@@ -347,9 +351,20 @@
             color: var(--foreground);
             margin-top: var(--space-xxl);
             margin-bottom: var(--space-md);
+
+            @include respond-below('lg') {
+                font-size: font-size(xl);
+                margin-top: spacing(lg);
+            }
         }
 
-        h2 { font-size: var(--font-size-xxl); }
+        h2 { 
+            font-size: var(--font-size-xxl); 
+            
+            @include respond-below('lg') {
+                font-size: font-size(xl);
+            }
+        }
         h3 { font-size: var(--font-size-xl); }
 
         a {

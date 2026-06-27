@@ -17,22 +17,20 @@ Thrak é a resposta.
 
 A premissa do Double Trio não era apenas estética. Era uma hipótese sobre improvisação coletiva: se dois trios autônomos compartilham um palco, cada um respondendo ao outro em tempo real, o resultado não é dobro de barulho — é uma terceira coisa que nenhum dos dois produziria sozinho.
 
-*Vrooom Vrooom* deixa isso evidente logo nos primeiros segundos. A textura não é densa, é estratificada. Fripp e Adrian Belew tecem linhas que se evitam e se encontram sem aviso. Trey Gunn e Tony Levin operam em frequências que raramente se sobrepõem. E Pat Mastelotto e Bill Bruford — dois bateristas com filosofias completamente diferentes — constroem uma polirritmia que soa orgânica precisamente porque não foi projetada para soar assim.
+O álbum abre assim: *Vrooom* deixa isso evidente logo nos primeiros segundos.  É uma conversa, quase como clássica pergunta e resposta da música clássica. Só que aqui, enquanto a pergunta é feita, ela já é trucada. É uma discussão que soa muito bem, interrompida por temas essencialmente king-crimsionianos.
 
-## O que "Thrak" significa
+*Dinosaur* encarna sua criatura por meio de um riff pesado e desengonçado, acompanhado por grunhidos e roncos produzidos pelas guitarras. É aqui que o álbum parece realmente começar, depois que as faixas anteriores apresentam seu conceito e estabelecem o solo em que estamos pisando.
 
-O título vem de um ser mitológico inventado pela banda — uma criatura formada pela fusão de dois organismos distintos que, ao se unir, produz algo maior e mais instável do que qualquer um separado. É uma metáfora transparente, mas funciona porque o disco a justifica.
+Adrian Belew assume o papel de um sobrevivente que contempla a própria obsolescência. A imagem parece refletir a situação do próprio King Crimson: uma banda reconhecida sobretudo pelos grandes feitos do passado, como *In the Court of the Crimson King* e *Red*.
 
-*People* tem a delicadeza melódica que Belew sempre trouxe ao grupo — uma voz capaz de humanizar estruturas que de outro modo seriam frias. *Sex Sleep Eat Drink Dream* opera na interseção entre funk industrial e rock de câmara. *One Time* é talvez a música mais inesperadamente bela que o grupo gravou na década de 1990.
+A esse ambiente quase caricatural contrapõe-se um refrão melódico e épico, interrompido por uma passagem introspectiva que sugere o medo da extinção. Quase como uma consciência que reflete sobre sua vulnerabilidade e percebe que sobreviver não significa ser eterno. Ao final, porém, a música recupera sua força com um solo carregado, como se o dinossauro reagisse à ameaça do desaparecimento com uma última demonstração de vitalidade, se impondo, mostrando sua natureza.
 
-## Bruford e Mastelotto
-
-Vale dedicar um parágrafo ao que os dois bateristas fazem aqui, porque é raro. Bill Bruford é um baterista jazzístico por formação — preciso, econômico, interessado no espaço. Pat Mastelotto vem do rock e tem uma relação mais física com o instrumento. Em vez de tentar homogeneizar esses estilos, Fripp os manteve separados e deixou o atrito fazer o trabalho.
-
-O resultado é uma seção rítmica que parece respirar em dois tempos diferentes — e de alguma forma funciona.
+Se *Dinosaur* pergunta o que significa sobreviver ao próprio tempo, *People* pergunta o que significa sobreviver aos outros. Tem uma musicalidade elástica, _funky_ e quer demonstrar a varidade humana em seus comportamentos e o modo evasimo de como o homem cria subterfúgios para si mesmo, ao mesmo tempo que reconhece quesão essas mesmas pessoas, confusas e contraditórias, que movem o mundo e o mantêm em funcionamento.
 
 ## Um disco de maturidade
 
-Thrak não é um disco fácil. Não tem a imediatidade de Discipline, nem a brutalidade de Red. É um disco para ser habitado — para ouvir três, quatro vezes até que as camadas comecem a revelar seus eixos. Quando isso acontece, o que parece caos organizado passa a parecer inevitável.
+Thrak não é um disco fácil. Tem a polimetria criativa de Discipline, dosada com brutalidade de Red: é a síntese dos dois em algo novo, mas que expressa perfeitamente a banda que tem um estilo único. As músicas e o próprio álbum são constantemente interrompidos para se alternar entre um e outro.
 
-Que é, no fim, o que toda grande música progressiva aspira a ser.
+Como todo álbum de rock progressivo, Thrak tem que ser ruminado. É um disco para ser revisitado — para ouvir três, quatro vezes até que as camadas comecem a revelar seus eixos. Quando isso acontece, o que parece caos organizado passa a ser inevitavelmente atraente, quase um reflexo de nós mesmos.
+
+Que é, no fim, o que toda grande música progressiva aspira a ser: instigante, azeda ao primeiro paladar, mas saborosa na digestão.
