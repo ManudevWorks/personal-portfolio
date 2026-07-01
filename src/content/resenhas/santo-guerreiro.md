@@ -25,7 +25,7 @@ Ao narrar Georgios, a história retoma seus rumos e a evolução torna-se mais r
 
 No entanto, por se tratar de uma obra de três volumes, não é aqui que a imagem que temos de São Jorge é plenamente revelada, mas apenas a formação jovem do rapaz. Conhecemos suas raízes, sua mentalidade e sua motivação para algo maior no futuro, prometido a ele por inúmeras pessoas ao longo de seus poucos anos de vida.
 
-A despeito disso, a obra não deixa de ser muito boa e cativante, superando os pontos negativos. A premissa criativa da história torna o livro uma ótima opção para quem gosta de romances históricos com personagens heróicos.
+A despeito disso, a obra não deixa de ser muito boa e cativante, superando os pontos negativos. A premissa criativa da história torna o livro uma ótima opção para quem gosta de romances históricos com personagens heroicos.
 
 ## Grande Santo, grande história
 
